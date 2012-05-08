@@ -1,2 +1,1 @@
-school
-======
+A reference repository for all of the code I've written in the courses I've taken.
