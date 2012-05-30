@@ -1,0 +1,10 @@
+#####
+# Notes for homework 1
+#####
+
+# create local account
+useradd -g ula -m -d /export/home/charles -s /bin/bash -c "Charles Bihis" charles
+
+# install sudo and wget
+pkgutil -i sudo
+pkgutil -i wget
