@@ -1,0 +1,61 @@
+#####
+# Notes and commands for working with Solaris
+#####
+
+
+#####
+# General commands
+#####
+
+# check the status of a service
+svcs -x ssh
+
+# commands to create a file of around 200mb in size
+dd if=/dev/urandom of=newfile.dat bs=1024 count=200000
+mkfile 200m /path/to/file/newfile.dat
+
+# command to create a new user with a set of properties
+sudo useradd -g primarygroup -G secondarygroup -m -d /export/home/newuser -s /bin/bash -c "comment for new user" newuser
+
+# shut down the system
+shutdown -y
+
+# reboot the system
+reboot
+
+#####
+# Disk commands
+#####
+
+# check disk information
+echo | sudo format
+sudo fomat < /dev/null
+
+# check detailed disk information
+iostat -En
+
+# create multi-disk storage pool (a.k.a. zpool or storage pool)
+sudo zpool create pool_name <disk> <disk> ... <disk>
+
+# create multi-disk mirror pool
+sudo zpool create pool_name mirror <disk> <disk>
+
+# list zfs pools
+zfs list
+
+# review available zpool disk size
+zpool iostat -v
+
+# review available zpool disk size, re-executing every 2 seconds
+zpool iostat 2
+
+
+#####
+# Milestone commands
+#####
+
+# change to single-user mode
+svcadm milestone single-user
+
+# change to default multi-user mode
+svcadm milestone milestone/multi-user-server:default
