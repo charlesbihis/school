@@ -17,6 +17,11 @@ mkfile 200m /path/to/file/newfile.dat
 # command to create a new user with a set of properties
 sudo useradd -g primarygroup -G secondarygroup -m -d /export/home/newuser -s /bin/bash -c "comment for new user" newuser
 
+# top for Solaris
+prtstat -a		# prstat plus top users
+prstat -Z 		# list zone stats also
+prstat -s rss 	# sort by resident memory size (a.k.a. who is eating up my memory?).
+
 # shut down the system
 shutdown -y
 
@@ -45,6 +50,7 @@ zfs list
 
 # review available zpool disk size
 zpool iostat -v
+zpool status
 
 # review available zpool disk size, re-executing every 2 seconds
 zpool iostat 2
