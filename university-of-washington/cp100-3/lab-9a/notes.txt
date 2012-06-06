@@ -1,0 +1,20 @@
+With the following information...
+
+* LDAP server type: Microsoft Active Directory windows 2008 server.
+* The domain is ad.ulcert.uw.edu
+* The OU that contains the user accounts is ulcertUsers
+* Users are members of both ulcertStudents and Domain Users.  
+* The LDAP server name is ulc-230.ulcert.uw.edu
+* The bind user is ulabind12 with password 1qaz@WSX
+* The standard ldapsearch syntax is "ldapsearch -h <server> -D <user>@<domain> -w <password> -b <basedn> <filter>"
+
+...here are 3 queries that return some results...
+
+1. ldapsearch -h ulc-230.ulcert.uw.edu -D ulabind12@ad.ulcert.uw.edu -w 1qaz@WSX -b "ou=ulcertUsers,dc=ad,dc=ulcert,dc=uw,dc=edu" "objectclass=*"
+   # returns all users
+
+2. ldapsearch -h ulc-230.ulcert.uw.edu -D ulabind12@ad.ulcert.uw.edu -w 1qaz@WSX -b "ou=ulcertUsers,dc=ad,dc=ulcert,dc=uw,dc=edu" "SAMAccountName=charles"
+   # returns account where SAM account name is "charles" (i.e. me)
+
+3. ldapsearch -h ulc-230.ulcert.uw.edu -D ulabind12@ad.ulcert.uw.edu -w 1qaz@WSX -b "ou=ulcertUsers,dc=ad,dc=ulcert,dc=uw,dc=edu" "uidNumber=10014"
+   # returns account where uid is "10014" (i.e. again, me)
