@@ -1,0 +1,57 @@
+SELECT *
+FROM User
+
+INSERT INTO User
+VALUES ('UserID', Course_id, PrivilegeLvl, 'First_Name', 'Last_Name', 'password_hashed')
+
+DELETE FROM User
+WHERE UserID = ?
+
+UPDATE User
+SET attrib = value
+WHERE UserID = ?
+
+-----
+
+INSERT INTO XG_ProblemTraitMadeFor
+VALUES ('problem_id', 'prof_id', 'course_id', 'plant_id_parent_A', 'plant_id_parent_B', 'trait_A_desc', 'trait_A_unit',   'trait_B_desc', 'trait_B_unit', 'number_of_progeny_per_cross', 'number_of_cross', 'number_of_displayed_plants', 'start_date', 'due_date')
+
+DELETE FROM XG_ProblemTraitMadeFor
+WHERE problem_id = ?
+
+UPDATE XG_ProblemTraitMadeFor
+SET attrib = value
+WHERE problem_id = ?
+
+-----
+
+INSERT INTO Course
+VALUES (CourseID, Name, Description);
+
+DELETE FROM Course
+WHERE CourseID = ?
+
+UPDATE Course
+SET attrib = value
+WHERE CourseID = ?
+
+-----
+
+INSERT INTO XG_PlantGenerates
+VALUES (PlantID, StudentID, ProblemID, GenerationNum, ValueTraitA,  ValueTraitB, Genotype);
+
+DELETE FROM XG_PlantGenerates
+WHERE PlantID = ?
+
+UPDATE XG_PlantGenerates
+SET attrib = value
+WHERE PlantID = ?  
+
+-----
+
+INSERT INTO XG_FeedbackLeftFor
+VALUES (feedback_id, feedback_text, ta_or_prof_id, student_id, problem_id)
+
+
+
+

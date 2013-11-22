@@ -1,0 +1,87 @@
+		if (Soundwave.GetLeftKneeAngle() < 0 && Soundwave.GetRightKneeAngle() < 0)
+		{
+			Soundwave.SetLeftKneeAngle(Soundwave.GetLeftKneeAngle() + 1);
+			Soundwave.SetRightKneeAngle(Soundwave.GetRightKneeAngle() + 1);
+
+			if (Soundwave.GetLeftLegDrop() < 0 && Soundwave.GetRightLegDrop() < 0)
+			{
+				Soundwave.SetLeftLegDrop(Soundwave.GetLeftLegDrop() + 1);
+				Soundwave.SetRightLegDrop(Soundwave.GetRightLegDrop() + 1);
+				Soundwave.SetTorsoLength(Soundwave.GetTorsoLength() - 1);
+			}  // inner if statement
+			else if (Soundwave.GetTorsoLength() > 0)
+				Soundwave.SetTorsoLength(Soundwave.GetTorsoLength() - 1);
+		}
+
+			if (Soundwave.GetLeftKneeAngle() == 0 && Soundwave.GetRightKneeAngle() == 0)
+			{
+				if (Soundwave.GetLeftLowerLegLength() > 0 && Soundwave.GetRightLowerLegLength() > 0)
+				{
+					Soundwave.SetLeftLowerLegLength(Soundwave.GetLeftLowerLegLength() - 1);
+					Soundwave.SetRightLowerLegLength(Soundwave.GetRightLowerLegLength() - 1);
+				}  // inner if statement
+			}  // outer if statement
+
+				if (Soundwave.GetLeftLowerLegLength() == 0 && Soundwave.GetRightLowerLegLength() == 0)
+		{
+			if (Soundwave.GetLeftUpperLegLength() > 0 && Soundwave.GetRightUpperLegLength() > 0)
+			{
+				Soundwave.SetLeftUpperLegLength(Soundwave.GetLeftUpperLegLength() - 1);
+				Soundwave.SetRightUpperLegLength(Soundwave.GetRightUpperLegLength() - 1);
+			}  // inner if statement
+		}  // outer if statement
+
+			if (Soundwave.GetLeftUpperLegLength() == 0 && Soundwave.GetRightUpperLegLength() == 0)
+		{
+			if (Soundwave.GetLeftFootRetract() > 0 && Soundwave.GetRightFootRetract() > 0)
+			{
+				Soundwave.SetLeftFootRetract((Soundwave.GetLeftFootRetract() - 1));
+				Soundwave.SetRightFootRetract((Soundwave.GetRightFootRetract() - 1));
+			}  // inner if statement
+		}  // outer if statement
+
+			if (Soundwave.GetLeftFootRetract() == 0 && Soundwave.GetRightFootRetract() == 0)
+		{
+			if (Soundwave.GetLeftLegForwardAngle() > 0 && Soundwave.GetRightLegForwardAngle() > 0)
+			{
+				Soundwave.SetLeftLegForwardAngle((Soundwave.GetLeftLegForwardAngle() - 1));
+				Soundwave.SetRightLegForwardAngle((Soundwave.GetRightLegForwardAngle() - 1));
+
+				Soundwave.SetTransformPosition(Soundwave.GetTransformPosition() + 1.55);
+			}  // inner if statement
+		}  // outer if statement
+
+
+			if (Soundwave.GetLeftLegForwardAngle() == 0 && Soundwave.GetRightLegForwardAngle() == 0)
+		{
+			if (Soundwave.GetLeftLegTwistAngle() > 0 && Soundwave.GetRightLegTwistAngle() > 0)
+			{
+				Soundwave.SetLeftLegTwistAngle((Soundwave.GetLeftLegTwistAngle() - 1) % 360);
+				Soundwave.SetRightLegTwistAngle((Soundwave.GetRightLegTwistAngle() - 1) % 360);
+			}  // inner if statement
+		}  // outer if statement
+
+			if (Soundwave.GetLeftLegTwistAngle() == 0 && Soundwave.GetRightLegTwistAngle() == 0)
+		{
+			if (Soundwave.GetLeftShoulderRotate() > 0 && Soundwave.GetRightShoulderRotate() > 0)
+			{
+				Soundwave.SetLeftShoulderRotate(Soundwave.GetLeftShoulderRotate() - 1);
+				Soundwave.SetRightShoulderRotate(Soundwave.GetRightShoulderRotate() - 1);
+			}  // inner if statement
+		}  // outer if statement
+
+			if (Soundwave.GetLeftShoulderRotate() == 0 && Soundwave.GetRightShoulderRotate() == 0)
+		{
+			if (Soundwave.GetLeftShoulderBack() < 0 && Soundwave.GetRightShoulderBack() < 0)
+			{
+				Soundwave.SetLeftShoulderBack(Soundwave.GetLeftShoulderBack() + 1);
+				Soundwave.SetRightShoulderBack(Soundwave.GetRightShoulderBack() - 1);
+			}  // inner if statement
+		}  // outer if statement
+		
+				if (Soundwave.GetLeftLowerArmRetract() < Soundwave.GetMAXLOWERARMRETRACT() && Soundwave.GetRightLowerArmRetract() < Soundwave.GetMAXLOWERARMRETRACT())
+		{
+			Soundwave.SetLeftLowerArmRetract(Soundwave.GetLeftLowerArmRetract() + 1);
+			Soundwave.SetRightLowerArmRetract(Soundwave.GetRightLowerArmRetract() + 1);
+		}  // if statement
+

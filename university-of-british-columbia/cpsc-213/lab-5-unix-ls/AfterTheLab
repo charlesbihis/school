@@ -1,0 +1,20 @@
+//**************************************************************//
+//	Name: Charles Bihis		Class: Cpsc 213		//
+//	Student #: 43180009		Section: 203		//
+//	Login ID: i8a3			Lab Section: L2M	//
+//**************************************************************//
+
+
+1. The 'stat' call gives information about a particular file, however
+   does not work if the file is a symbolic link.  An example of    
+   appropriate uses would be...     
+      stat (some_path, some_stat_struct)  // where 'some_path' leads
+                                          // to a hard link file
+      lstat (some_path, some_stat_struct) // where 'some_path' here
+                                          // leads to a symbolic link
+
+2. No, it is not possible to store an infinite number of files with
+   a size of 0 bytes in the Unix file system because of the storage
+   used by each i-node.  Each file will require an i-node and
+   each i-node will require some space, regardless of the contents
+   of the file it corresponds to.

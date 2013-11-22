@@ -1,0 +1,39 @@
+//////////////////////////////////////////////////////////////////
+//	Name: Charles Bihis		Course: Cpsc 213	//
+//	Student #: 43180009		Class Section: 203	//
+//	Date: March 22, 2005		Lab Section: L2M	//
+////////////////////////////////////////////////////////////////// 
+
+Server Test Output
+
+pender:~/cs213/a7_L2M> testServer 5656
+Server: Calling createServerSocket(5656)
+Server: Waiting for connection
+Server: Accept connection from client 24.80.26.117 port 60151
+Server: Client sent: ^Hello
+^
+Server: Going to send ^HELLO
+^
+Server: Sent 7 bytes
+Server: Waiting for connection
+Server: Accept connection from client 24.80.26.117 port 60153
+Server: Client sent: ^testing
+^
+Server: Going to send ^TESTING
+^
+Server: Sent 9 bytes
+Server: Waiting for connection
+Server: Accept connection from client 24.80.26.117 port 60154
+Server: Client sent: ^am i connected
+^
+Server: Going to send ^AM I CONNECTED
+^
+Server: Sent 16 bytes
+Server: Waiting for connection
+Server: Accept connection from client 24.80.26.117 port 60155
+Server: Client sent: ^end OF test
+^
+Server: Going to send ^END OF TEST
+^
+Server: Sent 13 bytes
+Server: Waiting for connection

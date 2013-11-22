@@ -1,0 +1,68 @@
+//////////////////////////////////////////////////////////////////////////
+//	Name: Charles Bihis			Course: Cpsc 221	//
+//	Student #: 43180009			Class Section: 201	//
+//	Date: March 5, 2005			Lab Section: L2M	//
+//////////////////////////////////////////////////////////////////////////
+
+*** stringTest - Sample Output ***
+
+
+pender:~/cs221/lab2_L2M> make -f Makefile
+g++ -c railyard.cpp stack_class.cpp queue_class.cpp
+g++ -o railyard railyard.o stack_class.o queue_class.o
+g++ -c railyard_driver.cpp stack_class.cpp queue_class.cpp
+g++ -o stringTest railyard_driver.o stack_class.o queue_class.o
+pender:~/cs221/lab2_L2M> stringTest
+*************************************************************
+*       Name: Charles Bihis                                     Course: Cpsc 221        *
+*       Student #: 43180009                                     Class Section: 201      *
+*       Date: March 5, 2005                                     Lab Section: L2M        *
+*************************************************************
+
+
+INCOMING RAILWAY CARS:
+locomotive
+coal
+uranium
+liquefied natural gas
+crude oil
+oriented strand board
+
+CARS PUSHED ONTO THE STACK:
+oriented strand board  
+crude oil  
+liquefied natural gas  
+uranium  
+coal  
+locomotive  
+
+CARS POPPED OFF THE STACK:
+oriented strand board
+crude oil
+liquefied natural gas
+uranium
+coal
+locomotive
+
+ENQUEUED:
+oriented strand board  
+crude oil  
+liquefied natural gas  
+uranium  
+coal  
+locomotive  
+
+DEQUEUED:
+oriented strand board
+crude oil
+liquefied natural gas
+uranium
+coal
+locomotive
+
+FINAL CONTENTS OF THE STACK: empty
+
+FINAL CONTENTS OF THE QUEUE: empty
+
+**********  End of Program **********
+pender:~/cs221/lab2_L2M> 

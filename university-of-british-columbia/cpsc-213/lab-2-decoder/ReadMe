@@ -1,0 +1,19 @@
+To the markers...
+
+For the most part, I have managed to get my program to decode one
+endian type.  However, after writing the function to decode the data,
+I found that it will decode the sample file which is little
+endian (sample.dat).  This did not surprise me since my home
+computer, which I was working from, was little endian as well.  But,
+when I went to test the program on the UNIX servers at school via
+SecureCRT, I found that it worked on there as well.  This surprised
+me because the UNIX system uses big endian and conflicts with the
+data endianness.  From there on, I could not figure out why this was
+so, so I was unable to work on switching from little endian to big
+endian, and vice versa.
+
+For the makefiles, I think I was able to comlete at least part of them,
+but to compile the actual program to test, I would type in...
+
+gcc -o decoder decoder_driver.c decoder.c dsupport.c endian.c
+decoder <FILENAME>

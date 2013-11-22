@@ -1,0 +1,35 @@
+2.4 Constraints
+
+2.4.1 Hardware limitations
+
+	The system is designed to run on Machintosh G5 running on Mac OS X 10.2.8.
+
+2.4.2 Software lImitations
+
+	The system should be developed in an interpretive language and should be platform independent.
+
+	The following software is needed in order to run the applications:
+		- Apache 1.3.33
+		- MySQL 3.23
+		- PHP 4.2.3
+
+	Installation should be easy.
+
+	The application should load students information and login information from previous GreenGene software.
+
+2.4.3 Parallel Operations
+
+	There is no software limitation on the number of concurrent users of the system. This is limited solely by the hardware resources and server configuration.
+
+2.4.4 Audit functions
+
+	Errors are logged along with the timestamps.
+
+2.4.5 Reliability Requirements
+
+	Failures in the software should not cause any error in any other application running on the server or physical server itself.
+	The application should be able to function reliably for minimum of two (2) days.
+
+2.4.6 Safety and Security considerations
+
+	Students should not be able to access the backend database directly.

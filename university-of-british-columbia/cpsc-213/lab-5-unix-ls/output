@@ -1,0 +1,140 @@
+//**********************************************************************//
+// 	Name: Charles Bihis			Class: Cpsc 213		//
+// 	Student #: 43180009			Section: 203		//
+// 	Login ID: i8a3				Lab Section: L2M	//
+//**********************************************************************//
+
+This is sample output from running the program 'UnixLs'.  I first run the
+program with or without input arguments, and then follow it directly with
+the corresponding 'ls' call with the same input arguments...
+
+
+
+
+pender:~/cs213/a5_L2M> make -f Makefile
+gcc -c UnixLs.c
+gcc -o UnixLs UnixLs.o
+pender:~/cs213/a5_L2M> unalias ls
+pender:~/cs213/a5_L2M> UnixLs
+WHO-AM-I      AfterTheLab   UnixLs.c      UnixLs.o      Makefile      
+UnixLs        
+pender:~/cs213/a5_L2M> ls
+AfterTheLab  Makefile     UnixLs       UnixLs.c     UnixLs.o     WHO-AM-I
+pender:~/cs213/a5_L2M> UnixLs -i
+ 31738837 WHO-AM-I       31738838 AfterTheLab    31738839 UnixLs.c      
+ 31738840 UnixLs.o       31738841 Makefile       31738842 UnixLs        
+pender:~/cs213/a5_L2M> ls -i
+  31738838 AfterTheLab    31738842 UnixLs         31738840 UnixLs.o
+  31738841 Makefile       31738839 UnixLs.c       31738837 WHO-AM-I
+pender:~/cs213/a5_L2M> UnixLs -l
+ -rw-------   1 i8a3     undergrad     192 Feb 19 2005 15:51 WHO-AM-I
+ -rw-------   1 i8a3     undergrad       4 Feb 19 2005 15:52 AfterTheLab
+ -rw-------   1 i8a3     undergrad   15186 Feb 21 2005 21:05 UnixLs.c
+ -rw-------   1 i8a3     undergrad    9556 Feb 22 2005 00:57 UnixLs.o
+ -rw-------   1 i8a3     undergrad     190 Feb 21 2005 21:18 Makefile
+ -rwx------   1 i8a3     undergrad   13996 Feb 22 2005 00:57 UnixLs
+pender:~/cs213/a5_L2M> ls -l
+total 104
+-rw-------   1 i8a3     undergrad       4 Feb 19 15:52 AfterTheLab
+-rw-------   1 i8a3     undergrad     190 Feb 21 21:18 Makefile
+-rwx------   1 i8a3     undergrad   13996 Feb 22 00:57 UnixLs
+-rw-------   1 i8a3     undergrad   15186 Feb 21 21:05 UnixLs.c
+-rw-------   1 i8a3     undergrad    9556 Feb 22 00:57 UnixLs.o
+-rw-------   1 i8a3     undergrad     192 Feb 19 15:51 WHO-AM-I
+pender:~/cs213/a5_L2M> UnixLs -l ..
+ drwx------   2 i8a3     undergrad    4096 Jan 18 2005 13:33 a1_L2M
+ drwx------   4 i8a3     undergrad    4096 Feb  1 2005 03:44 a3_L2M
+ drwx------   2 i8a3     undergrad    4096 Feb  8 2005 14:59 a4_L2M
+ -rw-r--r--   1 i8a3     undergrad     192 Jan 13 2005 18:09 WHO-AM-I
+ drwx------   2 i8a3     undergrad    4096 Feb 22 2005 00:57 a5_L2M
+ drwx------   2 i8a3     undergrad    4096 Jan 25 2005 14:58 a2_L2M
+ drwx------   2 i8a3     undergrad    4096 Feb 19 2005 15:51 testdir
+pender:~/cs213/a5_L2M> ls -l ..
+total 56
+-rw-r--r--   1 i8a3     undergrad     192 Jan 13 18:09 WHO-AM-I
+drwx------   2 i8a3     undergrad    4096 Jan 18 13:33 a1_L2M
+drwx------   2 i8a3     undergrad    4096 Jan 25 14:58 a2_L2M
+drwx------   4 i8a3     undergrad    4096 Feb  1 03:44 a3_L2M
+drwx------   2 i8a3     undergrad    4096 Feb  8 14:59 a4_L2M
+drwx------   2 i8a3     undergrad    4096 Feb 22 00:57 a5_L2M
+drwx------   2 i8a3     undergrad    4096 Feb 19 15:51 testdir
+pender:~/cs213/a5_L2M> UnixLs -i -R ../a3_L2M
+  8066499 WHO-AM-I          8066500 ReadMe           12775623 AfterTheLab     
+ 10495159 tree_files       10495160 hangman_files   
+
+../a3_L2M/tree_files
+ 30802318 tree             30802317 tree.c             782628 tree-bugs.txt   
+
+../a3_L2M/hangman_files
+ 10495149 endgame.c       10495150 extern.c        10495151 getguess.c     
+ 10495152 getword.c       10495153 hangman.h       10495154 main.c         
+ 10495155 pathnames.h     10495156 playgame.c      10495157 prdata.c       
+ 10495158 prman.c         10495161 prword.c        10495162 setup.c        
+ 10495163 fixedhangman    10495164 Makefile        29721768 endgame.o      
+ 29721769 extern.o        29721770 getguess.o      29721771 getword.o      
+ 29721772 main.o          29721763 playgame.o      29721764 prdata.o       
+ 29721765 prman.o         29721766 prword.o        29721767 setup.o        
+  9974397 hangman        
+pender:~/cs213/a5_L2M> ls -i -R ../a3_L2M
+../a3_L2M:
+  12775623 AfterTheLab       8066499 WHO-AM-I         10495159 tree_files
+   8066500 ReadMe           10495160 hangman_files
+
+../a3_L2M/hangman_files:
+  10495164 Makefile        29721771 getword.o       29721764 prdata.o
+  10495149 endgame.c        9974397 hangman         10495158 prman.c
+  29721768 endgame.o       10495153 hangman.h       29721765 prman.o
+  10495150 extern.c        10495154 main.c          10495161 prword.c
+  29721769 extern.o        29721772 main.o          29721766 prword.o
+  10495163 fixedhangman    10495155 pathnames.h     10495162 setup.c
+  10495151 getguess.c      10495156 playgame.c      29721767 setup.o
+  29721770 getguess.o      29721763 playgame.o
+  10495152 getword.c       10495157 prdata.c
+
+../a3_L2M/tree_files:
+  30802318 tree               782628 tree-bugs.txt    30802317 tree.c
+pender:~/cs213/a5_L2M> UnixLs -il -li ~
+   9666659 drwx------   2 i8a3     undergrad    4096 May 20 2004 11:09 csh_init
+   9666672 drwx------   4 i8a3     undergrad    4096 May 20 2004 09:07 bin
+   5885293 drwx------   2 i8a3     undergrad    4096 May 20 2004 10:22 bash_init
+  15950766 drwx------   2 i8a3     undergrad    4096 Nov 17 2004 15:46 Mail
+   1731647 drwx------   7 i8a3     undergrad    4096 Jan 13 2005 12:16 cs121
+  28308273 drwx------   2 i8a3     undergrad    4096 Jan 27 2005 11:34 Programs
+   4587471 drwx------   5 i8a3     undergrad    4096 Oct 25 2004 22:48 Windows
+   5326557 -rwx------   1 i8a3     undergrad    4046 Dec 20 2000 08:47 mred.pre
+  13397841 drwx------   8 i8a3     undergrad    4096 Feb 19 2005 15:51 cs213
+  13397844 drwx------   3 i8a3     undergrad    4096 Jan 27 2005 19:37 cs221
+  29747775 drwx------   4 i8a3     undergrad    4096 Sep 21 2004 13:02 workspace
+  13397851 -rw-------   1 i8a3     undergrad     197 Jan 23 2005 12:59 #thingee#
+pender:~/cs213/a5_L2M> ls -il -li ~
+total 96
+  13397851 -rw-------   1 i8a3     undergrad     197 Jan 23 12:59 #thingee#
+  15950766 drwx------   2 i8a3     undergrad    4096 Nov 17 15:46 Mail
+  28308273 drwx------   2 i8a3     undergrad    4096 Jan 27 11:34 Programs
+   4587471 drwx------   5 i8a3     undergrad    4096 Oct 25 22:48 Windows
+   5885293 drwx------   2 i8a3     undergrad    4096 May 20  2004 bash_init
+   9666672 drwx------   4 i8a3     undergrad    4096 May 20  2004 bin
+   1731647 drwx------   7 i8a3     undergrad    4096 Jan 13 12:16 cs121
+  13397841 drwx------   8 i8a3     undergrad    4096 Feb 19 15:51 cs213
+  13397844 drwx------   3 i8a3     undergrad    4096 Jan 27 19:37 cs221
+   9666659 drwx------   2 i8a3     undergrad    4096 May 20  2004 csh_init
+   5326557 -rwx------   1 i8a3     undergrad    4046 Dec 20  2000 mred.pre
+  29747775 drwx------   4 i8a3     undergrad    4096 Sep 21 13:02 workspace
+pender:~/cs213/a5_L2M> UnixLs -iR -li ./
+  31738837 -rw-------   1 i8a3     undergrad     192 Feb 19 2005 15:51 WHO-AM-I
+  31738838 -rw-------   1 i8a3     undergrad       4 Feb 19 2005 15:52 AfterTheLab
+  31738839 -rw-------   1 i8a3     undergrad   15186 Feb 21 2005 21:05 UnixLs.c
+  31738840 -rw-------   1 i8a3     undergrad    9556 Feb 22 2005 00:57 UnixLs.o
+  31738841 -rw-------   1 i8a3     undergrad     190 Feb 21 2005 21:18 Makefile
+  31738842 -rwx------   1 i8a3     undergrad   13996 Feb 22 2005 00:57 UnixLs
+pender:~/cs213/a5_L2M> ls -iR -li ./
+./:
+total 104
+  31738838 -rw-------   1 i8a3     undergrad       4 Feb 19 15:52 AfterTheLab
+  31738841 -rw-------   1 i8a3     undergrad     190 Feb 21 21:18 Makefile
+  31738842 -rwx------   1 i8a3     undergrad   13996 Feb 22 00:57 UnixLs
+  31738839 -rw-------   1 i8a3     undergrad   15186 Feb 21 21:05 UnixLs.c
+  31738840 -rw-------   1 i8a3     undergrad    9556 Feb 22 00:57 UnixLs.o
+  31738837 -rw-------   1 i8a3     undergrad     192 Feb 19 15:51 WHO-AM-I
+pender:~/cs213/a5_L2M>
+ 

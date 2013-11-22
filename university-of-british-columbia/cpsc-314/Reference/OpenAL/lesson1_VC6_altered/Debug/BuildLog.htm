@@ -1,0 +1,48 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: main, Configuration: Debug|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "c:\Documents and Settings\Cb\Desktop\lesson1_VC6\Debug\RSP00000D.rsp" with contents
+[
+/Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FD /EHsc /RTC1 /MLd /YX"stdafx.h" /Fp".\Debug/main.pch" /Fo".\Debug/" /Fd".\Debug/" /W3 /c /ZI /TP
+".\main.cpp"
+]
+Creating command line "cl.exe @"c:\Documents and Settings\Cb\Desktop\lesson1_VC6\Debug\RSP00000D.rsp" /nologo"
+Creating temporary file "c:\Documents and Settings\Cb\Desktop\lesson1_VC6\Debug\RSP00000E.rsp" with contents
+[
+/OUT:".\Debug/main.exe" /INCREMENTAL:NO /NOLOGO /DEBUG /PDB:".\Debug/main.pdb" /SUBSYSTEM:CONSOLE /MACHINE:X86 /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup opengl32.lib glu32.lib glut32.lib openal32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib
+".\Debug\main.obj"
+]
+Creating command line "link.exe @"c:\Documents and Settings\Cb\Desktop\lesson1_VC6\Debug\RSP00000E.rsp""
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+main.cpp
+c:\Documents and Settings\Cb\Desktop\lesson1_VC6\main.cpp(127) : warning C4996: 'alutUnloadWAV' was declared deprecated
+        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\Include\AL\alut.h(105) : see declaration of 'alutUnloadWAV'
+c:\documents and settings\cb\desktop\lesson1_vc6\main.cpp(126) : warning C4700: local variable 'freq' used without having been initialized
+c:\documents and settings\cb\desktop\lesson1_vc6\main.cpp(126) : warning C4700: local variable 'size' used without having been initialized
+c:\documents and settings\cb\desktop\lesson1_vc6\main.cpp(126) : warning C4700: local variable 'data' used without having been initialized
+c:\documents and settings\cb\desktop\lesson1_vc6\main.cpp(126) : warning C4700: local variable 'format' used without having been initialized
+c:\documents and settings\cb\desktop\lesson1_vc6\main.cpp(141) : warning C4700: local variable 'loop' used without having been initialized
+Linking...
+LINK : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+main.obj : error LNK2019: unresolved external symbol __imp__alutUnloadWAV referenced in function "char __cdecl LoadALData(void)" (?LoadALData@@YADXZ)
+main.obj : error LNK2019: unresolved external symbol __imp__alutExit referenced in function "void __cdecl KillALData(void)" (?KillALData@@YAXXZ)
+main.obj : error LNK2019: unresolved external symbol __imp__alutInit referenced in function _main
+.\Debug/main.exe : fatal error LNK1120: 3 unresolved externals
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://c:\Documents and Settings\Cb\Desktop\lesson1_VC6\Debug\BuildLog.htm"
+main - 4 error(s), 7 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

@@ -1,0 +1,19 @@
+//////////////////////////////////////////////////////////////////
+//	Name: Charles Bihis		Course: Cpsc 213	//
+//	Student #: 43180009		Class Section: 203	//
+//	Date: April 5, 2005		Lab Section: L2M	//
+////////////////////////////////////////////////////////////////// 
+
+After The Lab
+
+1. Yes they could benefit with respect to the sessions array, becuase
+   it would lock the array from being unexpectedly modified.  To do
+   this, the lock must come after the read and the unlock must be
+   before the next read.
+
+2. ?
+
+3. The server would end up sending 2 * (N - 1)(N) DISPLAY messages. For
+   each message sent by one client, the server sends out (N - 1) DISPLAY
+   messages to all other clients.  The server does this N times for each
+   of the N clients, and further, does it twice, once for each message.

@@ -1,0 +1,64 @@
+
+<script language="JavaScript">
+
+function showit() { 
+var obj = document.getElementById('div1');
+obj.style.display = "block";
+}
+
+
+function hideit() { 
+var obj = document.getElementById('div1');
+obj.style.display = "none";
+}
+
+</script>
+
+Hi <Professor Name>!<br>
+Here is a list of problems assigned to you:<br>
+
+<p><a href="createproblem.php">Create Problem</a></p>
+
+<form method="POST" action="">
+
+Click on a problem to edit, and select it for deletion.
+<table class="listing" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th>Problem&nbsp;</th>
+    <th>Course&nbsp;</th>
+    <th>Start Date&nbsp;</th>
+    <th>Due Date&nbsp;</th>
+    <th>Options/Views&nbsp;</th>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" name="courseid1" value="ON" />
+      <a href="viewproblem.php?id=###">Trait A and B</a>&nbsp;</td>
+    <td>BIOL 334</td>
+    <td>01/06</td>
+    <td>04/06</td>
+    <td>
+    <a href="viewproblem.php?id=###">View Students</a></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" name="courseid2" value="ON" />
+      <a href="viewproblem.php?id=###">Trait C and D</a>&nbsp;</td>
+    <td>BIOL 334</td>
+    <td>01/06</td>
+    <td>02/06</td>
+    <td>
+    <a href="viewproblem.php?id=###">View Students</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="4"><input type="submit" value="delete" name="deletebut" /> 
+    <input type="reset" value="reset" name="reset" />
+    </td>
+  </tr>
+  
+</table>
+
+
+</form>

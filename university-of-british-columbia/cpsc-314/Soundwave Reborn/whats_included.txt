@@ -1,0 +1,15 @@
+articulated joint movements
+dynamic camera views
+transparency through alpha blending
+culling and clipping panes
+anti-aliasing for wire-frame mode
+fog
+skybox
+
+
+THINGS TO ADD
+particle systems
+terrain generation
+real-time shadows
+collision detection
+textures

@@ -1,0 +1,23 @@
+Name: Charles Bihis                 Course: Cpsc 221
+Student #: 43180009                 Class Section: 201
+Date: January 26, 2005              Lab Section: L2M
+
+
+Student Name              Percent Grade     Letter Grade
+
+Steve Adams:                  73.7%              B 
+Jill Anne Connors:            91.7%              A+
+Elvis:                        79.0%              B+
+Mike LeBlanc:                 92.0%              A+
+Joe Burt:                     26.3%              F 
+Elanor Johnson:               82.5%              A-
+Elena Lee:                    83.2%              A-
+
+
+Number of Students:          7
+Average Final Exam Grade:    75.2%
+Average Midterm Exam Grade:  76.9%
+Average Lab Mark:            53.3%
+Average Course Mark:         75.5%
+
+***** End of program *****

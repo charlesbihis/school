@@ -1,0 +1,23 @@
+# makefile 3 - makePattern
+# cpsc 213 lab 2 - decode
+# Concepts introduced: Advanced features of a makefile
+
+CC=	gcc
+CFLAGS=	-g -c
+PROG=   decoder
+SRCS=   decoder_driver.c decoder.c dsupport.c endian.c
+OBJS=	$(SRCS:.c=.o)
+
+$(PROG): $(OBJS)
+	$(CC) $(CFLAGS) -o $(PROG) $(OBJS) 
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
+decoder_driver.o: decoder_driver.c
+decoder.o: decoder.c decoder.h greetings.h
+dsuppot.o: dsupport.h endian.h
+endian.o: endian.h
+
+# End of makefile makePattern
+

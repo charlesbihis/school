@@ -1,0 +1,35 @@
+//////////////////////////////////////////////////////////////////////////
+// 	Name: Charles Bihis			Course: Cpsc 213	//
+// 	Student #: 43180009			Class Section: 203	//
+// 	Date: March 15, 2005			Lab Section L2M		//
+//////////////////////////////////////////////////////////////////////////
+
+After The Lab
+
+1.  'bankKey' is doing a simple transaction, transferring funds
+    from account 2 to account 1.
+
+2.  In this scenario, incorrect balances may be written to the account.
+    This is because if a balance is read from an account after a new
+    balance is written to it, it will have recorded an 'old' (ie incorrect)
+    balance.  Therefore, it will calculate an incorrect new balance, and
+    write an incorrect new balance to file.
+
+3.  The transaction ID's must be unique in order for the logfile to be used
+    properly.  It must be able to identify each transaction individually so
+    that it knows which processes were completed successfully, and which were
+    terminated prematurely.
+
+4.  Locking the 'recordlog ()' function at the beginning of the file is
+    important because it is an easy place to check if the file is in 
+    use (and therefore locked) or not.  Only one byte is necessary because
+    it may act as a marker for other files to check, rather than other files
+    checking the entire file.
+
+5a. If a process is scheduled to log the processes of a transaction before
+    the particular process has occurred, and the transaction is terminated
+    in between, then the log file and the actual most recent state of the
+    transaction are not the same.  This will result in inconsistency.
+
+ b. The 'fsync ()' function hold the processes until all writes to disk
+    are completed.

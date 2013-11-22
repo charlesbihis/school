@@ -1,0 +1,18 @@
+Name: Charles Bihis					Course: Cpsc 221
+Student #: 43180009					Class Section: 201
+Date: January 26, 2005					Lab Section: L2M
+
+
+Student Name              Percent Grade     Letter Grade
+
+James:                        77.7%              B+
+Arthur:                       77.0%              B+
+Mary:                         76.9%              B+
+Spencer:                      89.3%              A 
+Robert:                       52.9%              D 
+Adam:                         61.0%              C 
+Susan:                        83.8%              A-
+George:                       44.7%              F 
+
+
+***** End of program *****

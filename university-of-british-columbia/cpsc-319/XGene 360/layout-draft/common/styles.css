@@ -1,0 +1,287 @@
+/* >>> file: styles.css      <<< */
+/* >>> author: Susannah Poon <<< */
+
+/* <<< predefined >>> */
+/* html, body */
+html, body { 
+	background-color: #66cc33; 
+	background-image: url('../images/rightbar.gif');
+	background-repeat: repeat-y;
+	background-position: 100% 0%;	
+	font-family: "Tahoma", "Geneva", Arial, san-serif; 	 
+	font-size: 1.0em;
+	text-align: center;   /* IE hack for center elements */
+	width: 100%;
+	color: #000000; 
+	margin: 0px; 
+	padding: 0px; 	
+	}
+h1 {
+	margin: 0px;
+	padding: 0px;
+	}
+h2 {
+	color: #000000;
+	font-family: arial, helvetica, verdana, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0px 0px 10px 0px;
+	}
+h3 {
+	color: #000000;
+	font-family: arial, helvetica, verdana, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0px 0px 10px 0px;
+	}
+form {
+	margin: 0px;
+	padding: 0px;
+	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+	clear: both;
+	}
+tbody {
+	margin: 0px;
+	padding: 0px;
+	}
+td, th {
+	padding: 0px;
+	vertical-align: top;
+	}
+p {
+	margin: 0px;
+	}
+a {
+	color: #666600;
+	text-decoration: underline;
+	cursor: pointer ;
+	}
+img {
+	border: 0px;
+	}
+
+/* <<< common classes >>> */
+/* gets rid of any border */
+.noborder {
+	border: 0px;
+	}
+/* hides element */
+.invisible { 
+	display: none; 
+	}
+/* block element */
+.visible {
+	display: block;
+	}
+/* centers element */
+.centered {
+	position: relative;
+	text-align: center;
+	margin: 0px auto;
+	clear: both;
+	}
+
+/* <<< containers >>> */
+/* main container, displays right vertical bar */
+div#main {
+	background-color: none;
+	text-align: left; 
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	}
+/* right vertical bar graphic container for main container */
+div#main #mainrightbargraphic {
+	background-color: none;
+	background-image: url('../images/rightbar_graphic.gif');
+	background-repeat: no-repeat;
+	background-position: 100% 0%;
+	position: absolute;
+	top: 0px;	
+	}
+/* header container, contains page title */
+div#main #header { 
+	background-color: #66cc33; 
+	background-image: url('../images/header.gif');
+	background-repeat: repeat-x;
+	background-position: 0% 100%;
+	width: 100%; 
+	height: 65px;
+	margin: 0px; 
+	padding: 0px; 
+	border: 0px; 
+	position: absolute;
+	top: 0px;
+	left: 0px; 
+	}
+/* plant graphic wrapper in header container */
+div#main #header #headergraphic {
+	background-color: none; 
+	background-image: url('../images/header_graphic.gif');
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	width: 100%;
+	height: 65px;
+	}
+/* header text for header container */
+div#main #header #headergraphic h1 {
+	text-align: left; 
+	font-size: 1.5em;
+	font-weight: normal;
+	color: #ffffff;
+	padding: 25px 0px 0px 30px;
+	}
+/* navi container, navigation bar for page */
+div#main #navi {
+	background-color: #66cc33; 
+	background-image: url('../images/navi.gif');
+	background-repeat: repeat-x;
+	background-position: 0% 0%;
+	width: 100%;
+	height: 35px;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 65px;
+	left: 0px;
+	}
+/* links for navi container */
+div#main #navi a {
+	color: #0066cc;
+}
+/* list for navi link buttons */
+div#main #navi ul {
+	font-size: 0.8em;
+	white-space: nowrap;
+	margin: 0px 0px 0px 35px;
+	padding: 0px;
+	display: inline;
+	list-style-type: none;
+	}
+/* list item for navi link buttons */
+div#main #navi li {
+	line-height: 2.5em;
+	white-space: nowrap;
+	margin: 0px;
+	padding: 1px 20px 1px 20px;
+	border-right: 1px solid #ffffff;	
+	display: inline;
+	}
+/* for first list item for navi link buttons */	
+div#main #navi li.first {
+	border-left: 1px solid #ffffff;
+	}	
+/* content container, hold actual page content */
+div#main #content { 
+	background-color: #66cc33;
+	text-align: left; 
+	font-size: 0.8em; 
+	margin: 100px 35px 0px 0px; 
+	padding: 10px 20px 20px 20px; 
+	position: relative;
+	}
+/* footer container, will always be below content of page */
+div#main #footer { 
+	background-color: #66cc33; 
+	background-image: url('../images/footer.gif');
+	background-repeat: repeat-x;
+	background-position: 0% 0%;
+	text-align: left; 
+	width: 100%; 
+	height: 65px;
+	margin: 0px; 
+	padding: 0px; 
+	position: relative;
+	}
+/* joint graphic wrapper in footer container */
+div#main #footer #footergraphic {
+	background-color: none; 
+	background-image: url('../images/footer_graphic.gif');
+	background-repeat: no-repeat;
+	background-position: 100% 0%;
+	width: 100%;
+	height: 65px;
+	}	
+div#main #footer #footergraphic .footertext {
+	font-size: 0.9em;
+	color: #ffffff;
+	margin: 20px 0px 0px 30px;
+	padding: 20px 0px 0px 0px;
+	}
+
+/* <<< tables >>> */
+/* listing table class */ 
+div#main .listing {
+	background-color: none;
+	font-size: 0.9em;
+	text-align: inherit;
+	width: 100%;
+	margin: 10px 0px 10px 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	}
+div#main .listing th {
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: left;
+	margin: 0px;
+	padding: 2px;
+	border-width: 2px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-color: #009900;
+	border-collapse: collapse;
+	}
+div#main .listing td {
+	margin: 0px;
+	padding: 2px;
+	border-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-color: #009900;
+	border-collapse: collapse;
+	}	
+div#main .box {
+	background-color: none;
+	font-size: 0.8em;
+	text-align: right; /*LADHSLDLSD */
+	width: auto;
+	margin-top: 10px;
+	margin-right: inherit;
+	margin-left: inherit;
+	padding: 0px;
+	border-collapse: collapse;
+	}	
+div#main .box th {
+	background-color: #66cc66;
+	color: #006600;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+	height: 20px;
+	margin: 0px;
+	padding: 5px;
+	border-top: 2px solid #339999;
+	border-right: 2px solid #339999;
+	border-bottom: 1px solid #339999;
+	border-left: 2px solid #339999;
+	border-collapse: collapse;
+	text-transform: uppercase;
+	}	
+div#main .box td {
+	font-size: 1.3em;
+	margin: 0px;
+	padding: 8px 8px 10px 8px;
+	border-top: 1px solid #339999;
+	border-right: 2px solid #339999;
+	border-bottom: 2px solid #339999;
+	border-left: 2px solid #339999;
+	border-collapse: collapse;
+	}	

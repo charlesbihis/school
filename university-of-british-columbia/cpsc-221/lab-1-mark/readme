@@ -1,0 +1,25 @@
+Name: Charles Bihis			Course: Cpsc 221
+Student #: 43180009			Class Section: 201
+Date: January 27, 2005			Lab Section: L2M
+
+
+Lab 1 - readme
+
+To run this program, I would compile using the -o flag.  I would simply
+type..
+
+g++ -o Mark main.cpp Mark.cpp
+Mark
+
+...to run my program.  The input file names that are being looked for
+are StudentFile.txt and TeacherFile.txt where an error is outputted
+if the files are not found.  Those files as named, contain the data
+given in the lab details on WebCT.  I have created two new files,
+named StudentFile2.txt and TeacherFile2.txt.  I have run the program
+with both sets of input files and recorded their output.  The output
+file is CalculatedGrades.txt and it will be created if it does not
+already exist.  I have renamed the output file for my set of input files
+to CalculatedGrades2.txt.  Lastly, I have saved the output to the
+console in two more separate files named
+CalculatedGrades_console_output.txt and
+CalculatedGrades2_console_output.txt. 

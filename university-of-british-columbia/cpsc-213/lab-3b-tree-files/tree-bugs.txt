@@ -1,0 +1,424 @@
+Name: Charles Bihis			Course: Cpsc 213
+Student #: 43180009			Class Section: 203
+Date: January 29, 2005			Lab Section: L2M
+
+
+Lab 3
+
+
+************************** Bug 1 **************************
+
+1. When running the program, no values are outputted.  All that is
+   outputted is "Bus error".  When debugging, I located the problem
+   to be a segmentation fault occuring in the function 'add_node'.
+
+2. The output while debugging with gdb is copied below...
+
+   65        prev_num = new_num;
+   (gdb) 
+   70        return new_num % 1000;
+   (gdb) 
+   71      }
+   (gdb) 
+   add_node (t=0x9, prev=0xffbff7e4, value=807) at tree.c:95
+   95        if (t == NULL){               
+   (gdb) 
+   122       if (value < t->value){
+   (gdb) 
+
+   Program received signal SIGSEGV, Segmentation fault.
+   0x00010948 in add_node (t=0x9, prev=0xffbff7e4, value=807) at tree.c:122
+   122       if (value < t->value){
+   (gdb) 
+
+   Program terminated with signal SIGSEGV, Segmentation fault.
+   The program no longer exists.
+
+3. This bug is due to improperly initialized pointer.  This particular
+   pointer, 'root', is a pointer to a node and is declared in main and
+   initialized to address 9.  This creates a problem because it is then passed
+   on to the function 'add_node'.  Within this function, where the
+   pointer is now locally called 't', it is checked by an if statement 
+   to see if the tree is empty or if the bottom has been reached, in 
+   which case a new node would be created.  This would be signified 
+   by 't' equal to NULL, but since 't' is equal to address 9, it fails that test
+   and goes on to the next line, where another if statement tries to 
+   access a member of the node.  Since the node members have not been
+   initialized, and appropriate memory has not been allocated, a 
+   segmentation fault occurs.
+
+4. The fix to this problem was easy.  Simply initialize 'root' to NULL
+   instead of '(node *) 9' which was there previously.
+
+************************** Bug 2 **************************
+
+1. After fixing the first bug, the program ran with values outputted.
+   However, the values outputted should be a set of random numbers, but
+   they were not.  The values in the tree are not random, rather, they
+   were all the same.  Using gdb, I found that the values that are being
+   returned from the function 'randnum()' are always the same.
+
+2. The output while debugging with gdb is copied below...
+
+   54        unsigned long prev_num = 1;   /* the previous number in the sequence */
+   (gdb) 
+   60        new_num = ((16807 * prev_num) + 0) % 2147483647;
+   (gdb) 
+   65        prev_num = new_num;
+   (gdb) 
+   70        return new_num % 1000;
+   (gdb) 
+   71      }
+   (gdb) 
+   add_node (t=0x0, prev=0xffbff7e4, value=807) at tree.c:95
+   95        if (t == NULL){               
+   (gdb) 
+   99          new_node = (node *) malloc(sizeof(node));
+
+   ...where on line 54, prev_num, which should be holding values of old
+   randomly generated numbers to help create new random numbers, is actually
+   being re-declared and re-initialized.  So, the value being returned is
+   sent back to 'add_node' and can be seen under line 71, where it says
+   'value=807'.  This happens again when 'randnum()' is called later...
+
+   65        prev_num = new_num;
+   (gdb) 
+   70        return new_num % 1000;
+   (gdb) 
+   71      }
+   (gdb) 
+   add_node (t=0x21088, prev=0xffbff7e4, value=807) at tree.c:95
+
+   ...again after line 71.
+
+3. This bug creates a problem within the random number generating function.  
+   What the function actually does is output the same number with each call.
+   This is because it re-declares and re-initializes the variable 'prev_val'
+   which is supposed to be used to generate new random numbers.
+
+4. To fix this, I simply declared the variables 'prev_num' and 'new_num'
+   outside of 'randnum()' and inside of 'main()'.  Then I created pointers
+   that pointed to them, which I will pass to 'randnum()' as parameters.
+   This way, the values will declared once, initialized once, and the
+   changes to them will be saved.
+
+************************** Bug 3 **************************
+
+1. I notice now that there is an error in the output.  The number of nodes
+   that is output is wrong.  When debugging with gdb, I set a break in
+   the function 'in_order_check', where the variable which holds the number
+   of nodes, 'num_nodes', is incremented.  I displayed the value of 'num_nodes'
+   in gdb and it does increment, but when I looked to where the value is
+   to be outputted, the variable is not input to the 'printf' command.
+
+2. The output while debugging is as follows, with a breakpoint set at
+   the function 'in_order_check' and the value of 'num_nodes' being
+   displayed...
+
+   Breakpoint 1, in_order_check (t=0x21128, depth=2) at tree.c:144
+   144       if (t == NULL)
+   1: num_nodes = 2
+   (gdb) 
+   147       if (t->value > largest)
+   1: num_nodes = 2
+   (gdb) 
+   150       if (t->value < smallest)
+   1: num_nodes = 2
+   (gdb) 
+   151         smallest = t->value;
+   1: num_nodes = 2
+   (gdb) 
+   153       if (depth > max_depth)
+   1: num_nodes = 2
+   (gdb) 
+   154         max_depth = depth;
+   1: num_nodes = 2
+   (gdb) 
+   156       num_nodes++;
+   1: num_nodes = 2
+   (gdb) 
+   158       in_order_check(t->left, depth + 1);
+   1: num_nodes = 3
+
+   ... and later on, it still goes on to increment 'num_nodes'...
+
+   153       if (depth > max_depth)
+   1: num_nodes = 3
+   (gdb) 
+   156       num_nodes++;
+   1: num_nodes = 3
+
+3. This bug will simply output a wrong 'garbage' value for the number of
+   nodes in the tree.
+
+4. To fix this problem, I located the variable where the number of nodes is
+   stored, the function which keeps track of it (ie increments it), and
+   where the value is outputted.  Putting a break on the function and
+   dislaying the value, I narrowed the problem down to displaying.  So, 
+   I found out where it is displayed and fixed the problem by putting
+   the variable 'num_nodes' in the appropriate 'printf' command.
+
+************************** Bug 4 **************************
+
+1. This bug is creates another output problem.  The outputted numbers from
+   the tree are not displayed in order, which they should be.
+
+2. Here is the output from debugging using gdb, with a break in the function
+   'in_order_check' and displaying the values of 't->value'...
+
+  2: depth = 3
+  1: (*t).value = 58
+  (gdb) 
+
+  Breakpoint 1, in_order_check (t=0x0, depth=4) at tree.c:144
+  144       if (t == NULL)
+  2: depth = 4
+  1: (*t).value = Cannot access memory at address 0x8
+  Disabling display 1 to avoid infinite recursion.
+  (gdb) 
+  145         return;
+  2: depth = 4
+  (gdb) 
+  162     }
+  2: depth = 4
+  (gdb) 
+  in_order_check (t=0x21140, depth=3) at tree.c:159
+  159       in_order_check(t->right, depth + 1);
+  2: depth = 3
+  (gdb) 
+
+  Breakpoint 1, in_order_check (t=0x21158, depth=4) at tree.c:144
+  144       if (t == NULL)
+  2: depth = 4
+  (gdb) display (*t).value
+  3: (*t).value = 118
+  (gdb) s
+  147       if (t->value > largest)
+  3: (*t).value = 118
+  2: depth = 4
+
+  I noticed that the function will move leftwards down the tree until
+  it reaches a NULL node, then will move up a level and then check the right
+  side of the node.  Then it will repeat moving leftwards down that branch
+  until NULL, and then rightwards through the previous branch.  It is only
+  when both left and right branches are NULL that it will return and print
+  out the value of the most recent node.
+
+3. The bug is in the placement of the 'printf' command in the recursive
+   function 'in_order_check'.  The bug allows the function to print 
+   out nodes that are to the 'right' of other nodes before printing out the 
+   'leftmost' nodes.  This is an error because the nodes to the left are less
+   than the nodes to the right, and should therefore be printed first.
+
+4. To fix this problem, I set a breakpoint in the function 'in_order_check' and
+   displayed the values of '(*t).value' as well as 'depth'.  I made note of
+   when the variable should be displayed and when it shouldn't and it became
+   apparent to me that the 'printf' call should be made before the 
+   recursive call to 'in_order_check' passing along the right node.  So, I
+   removed the 'printf' call on line 161 and moved it to line 159, before
+   the second recursive call to 'in_order_check' passing the right node.
+
+  158: in_order_check(t->left, depth + 1); 
+  159: printf("%d\n",  t->value);		// added here instead
+  160: in_order_check(t->right, depth + 1);
+  161:
+  162: //printf("%d\n",  t->value);		//removed from here
+
+************************** Bug 5 **************************
+
+1. This bug is another one that outputs wrong values.  The outptut for
+   the largest value and the smallest value are mixed.  
+
+2. While observing the 'in_order_check' function, I kept note of the
+   variables 'largest', 'smallest', and the values that they were compared
+   to, 't->value'.  I noticed that the smallest number is indeed stored...
+
+  Breakpoint 1, in_order_check (t=0x21140, depth=3) at tree.c:144
+  144       if (t == NULL)
+  3: (*t).value = 58
+  2: smallest = 215
+  1: largest = 807
+  (gdb) 
+  147       if (t->value > largest)
+  3: (*t).value = 58
+  2: smallest = 215
+  1: largest = 807
+  (gdb) 
+  150       if (t->value < smallest)
+  3: (*t).value = 58
+  2: smallest = 215
+  1: largest = 807
+  (gdb) 
+  151         smallest = t->value;
+  3: (*t).value = 58
+  2: smallest = 215
+  1: largest = 807
+  (gdb) 
+  153       if (depth > max_depth)
+  3: (*t).value = 58
+  2: smallest = 58
+  1: largest = 807
+
+   ... and also that the largest number is also stored...
+
+  Breakpoint 1, in_order_check (t=0x210f8, depth=1) at tree.c:144
+  144       if (t == NULL)
+  3: smallest = 58
+  2: largest = 807
+  (gdb) display (*t).value
+  11: (*t).value = 863
+  (gdb) s
+  147       if (t->value > largest)
+  11: (*t).value = 863
+  3: smallest = 58
+  2: largest = 807
+  (gdb) 
+  148         largest = t->value;
+  11: (*t).value = 863
+  3: smallest = 58
+  2: largest = 807
+  (gdb) 
+  150       if (t->value < smallest)
+  11: (*t).value = 863
+  3: smallest = 58
+  2: largest = 863
+
+3. The output of the program was wrong.  When outputting the values stored
+   in the tree, the values printed for the largest and smallest were wrong.
+   Rather, they were mixed.  That is, the smallest value was output as being
+   the largest, and the largest was output as being the smallest.
+
+4. To fix this problem, I again located the variables which holds these
+   values and the function which keeps track of them.  I put a break in
+   the function, 'in_order_check', and displayed the variables 'smallest',
+   'largest', and 't->value'.  They were being stored properly, so I 
+   figured that it is where they were being output.  I found that the problem
+   was that they were being output according to the wrong output statements.
+   That is, when the output was saying the the largest value is being printed,
+   it would print the smallest, and vice versa.  So, I simply replaced one
+   variable with the other within the 'printf' call to fix it.
+
+************************** Bug 6 **************************
+
+1. This bug seems to be within the implementation of the tree.  I found that I
+   was a little unsure about whether or not a call of 'root 0' should yield
+   no tree (and no root), and therefore a depth of zero and no largest or
+   smallest values.  Or, if 'root 0' should yield just the root with no additional
+   nodes, with a single value, which also equals the largest and smallest values.
+   As I read from the bulletin boards, it says that a root with no value has
+   a depth of 0, and a root with a value and its children pointing to NULL has
+   a depth of 1.  So, since the program did not allow a root without a value to
+   be created, I made adjustments to do so.
+
+2. Setting a break in main, and observing what a call of 'tree 0' would
+   yield, I found that it still creates a root node by running through the
+   for loop ob line 195.  I wanted to fix this so that a call of 'tree 0' would
+   yield no nodes and a depth of 0, and only a call of 'tree 1' would
+   make a root node and a depth of 1...
+
+  Breakpoint 1, main (argc=2, argv=0xffbff864) at tree.c:173
+  173       node *root = NULL;    /* the root of the tree */
+  (gdb) display argv[1]
+  1: argv[1] = 0xffbff9df "0"
+  (gdb) s
+  178       prev_num = 1;
+  1: argv[1] = 0xffbff9df "0"
+  (gdb) 
+  179       new_num = 1;
+  1: argv[1] = 0xffbff9df "0"
+  (gdb) 
+  180       prev_num_pt = &prev_num;
+  1: argv[1] = 0xffbff9df "0"
+  (gdb) 
+  181       new_num_pt = &new_num;
+  1: argv[1] = 0xffbff9df "0"
+  (gdb) 
+  185       if (argc != 2){
+  1: argv[1] = 0xffbff9df "0"
+  (gdb) 
+  189       size_of_tree = atoi(argv[1]);
+  1: argv[1] = 0xffbff9df "0"
+  (gdb) 
+  195       for (count = 0; count <= size_of_tree; count++){
+  1: argv[1] = 0xffbff9df "0"
+  (gdb) display size_of_tree
+  2: size_of_tree = 0
+
+3. Before my changes, a call of 'tree 0' would create the root node and put a 
+   value in it, and therefore would have a depth of 1.  A call of 'tree 1' 
+   would add 1 node to the root node, and therefore have a depth of 2.  So, I
+   changed it so that it is possible to have a node with no value (ie have
+   no nodes) with a call of 'tree 0'.
+
+4. To fix this, I first initialized the value of 'depth' to 1 rather than 
+   0.  Then, I removed the 'equals' sign after the 'less than' sign in
+   the conditional part of the 'for statement'.  I did this because it would
+   allow the call of 'tree 0' to create no root.  If I did not do this,
+   a root node would always be created with any input value greater than
+   or equal to 0.  After this, I put an if statement before the 'for loop' 
+   on line 195 which checks to see that the input number of nodes is greater  
+   than 0.  If it is, then a node should be created, so it runs though the 
+   'for loop'.  Otherwise, if the input number of nodes is 0, then no nodes 
+   should be created, and an appropriate statement is output and the output
+   for the number of nodes and largest and smallest values are not shown.  
+   The 'if statement' in 'main' looks like...
+
+  195    if (size_of_tree > 0)
+  196      for (count = 0; count < size_of_tree; count++)
+  197        add_node(root, &root, randnum(prev_num_pt, new_num_pt));
+  198    else
+  199    {
+  200      printf ("Zero nodes makes no tree.\n");
+  201      return 0;
+  202    }
+
+************************** Bug 7 **************************
+
+1. This final bug is also one of output.  What happens is that all of the
+   psuedo-random numbers generated from the function 'randnum ()' are all
+   the different numbers, but the same set of different numbers generated
+   over and over again each time the program is run.
+
+2. When debugging, I noticed that since the value sent to 'randnum ()' is
+   always 1, it generates the same initial random number, and then saves it
+   to generate the next random number again and again.  Running the program
+   through gdb step by step the first time...
+
+  68        return *new_num % 1000;
+  (gdb) 
+  69      }
+  (gdb) 
+  add_node (t=0x0, prev=0xffbff7ec, value=807) at tree.c:93
+  93        if (t == NULL){               
+  (gdb) 
+  97          new_node = (node *) malloc(sizeof(node));
+  (gdb) display value
+  1: value = 807
+
+   ...and again the second time...
+
+  68        return *new_num % 1000;
+  (gdb) 
+  69      }
+  (gdb) 
+  add_node (t=0x0, prev=0xffbff7ec, value=807) at tree.c:93
+  93        if (t == NULL){               
+  (gdb) 
+  97          new_node = (node *) malloc(sizeof(node));
+  (gdb) display value
+  1: value = 807
+
+   ... still yields the same first random value of 807.
+
+3. The same set of random numbers is generated and used every time that
+   the program is run.  For example, a call of 'tree 6' would output
+   the numbers in the tree in order from least to greatest.  The same call
+   of 'tree 6' some time after should yield a different result, but it does
+   not.  Rather, it outputs the exact same results.
+
+4. To fix this, I initialized the variable to create the first random number
+   to a random number based on the clock time.  I did this by using the
+   command 'srand ()' and giving it a seed for which to start a set of
+   random numbers.  The seed I gave it, is 'time (0)', which returns the
+   processor time.  So, it would be very unlikely to get the same set of 
+   random numbers twice.

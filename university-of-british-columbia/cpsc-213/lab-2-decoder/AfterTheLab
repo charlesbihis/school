@@ -1,0 +1,15 @@
+1. In order to use memcpy(), you must include the stdio.h library.
+
+2. The length of a string stored as a negative integer is the absolute
+   value of the integer.  For example, a string is stored as -15 would
+   have a length of 15 bytes.
+
+3. In gcc, the -o option creates a .o file with a specified input name.
+   The structure of the call is gcc -c dotOFileName dotOFileName.c
+   where 'dotOFileName' is the name of the .o file to be created, and
+   dotOFileName.c is the source for the file.
+   The -c option also creates a .o file, but does not need an input
+   name.  Rather than use an input name like -o requires, -c uses
+   the name of first source file.  The structure of this call would be
+   gcc -o FileName.c.  This will give the same results as the previous
+   example.

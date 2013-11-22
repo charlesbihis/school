@@ -1,0 +1,41 @@
+//////////////////////////////////////////////////////////////////
+//	Name: Charles Bihis		Course: Cpsc 213	//
+//	Student #: 43180009		Class Section: 203	//
+//	Date: April 4, 2005		Lab Section: L2M	//
+////////////////////////////////////////////////////////////////// 
+
+Part 1 - Sample Output
+
+********************* Server *********************
+valdes:~/cs213/a8_L2M> chatServer 5000
+SIGPIPE set to ignore.13
+Client sent: "hello from terminal one"
+Client sent: "hi from terminal two"
+Client sent: "testing testing"
+Client sent: "one two three"
+^C
+valdes:~/cs213/a8_L2M>
+
+********************* Client One *********************
+valdes:~/cs213/a8_L2M> telnet localhost 5000
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+hello from terminal one
+hi from terminal two
+testing testing
+one two three
+^]
+telnet>
+
+********************* Client Two *********************
+valdes:~/cs213/a8_L2M> telnet localhost 5000
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+hello from terminal one
+hi from terminal two
+testing testing
+one two three
+^]
+telnet>

@@ -1,0 +1,11 @@
+1.  The fileIO's performance does depend on the block size.  This is because
+    it makes more simultaneous system calls to perform more each step.
+
+2.  The calls to fwrite and fread were significantly faster than the calls to 
+    write and read.
+
+3.  Using the same machine for all of the tests for part III ensures that the results
+    are consistent.  Using a different machine would give different times for
+    each command call.
+
+

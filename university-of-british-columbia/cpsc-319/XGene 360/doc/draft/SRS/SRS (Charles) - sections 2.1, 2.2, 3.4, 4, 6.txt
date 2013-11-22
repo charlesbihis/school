@@ -1,0 +1,71 @@
+--------------------------------------------------------------------------------------------
+2. The Overall Description
+--------------------------------------------------------------------------------------------
+
+X-Gene 360 is an educational tool which simulates the behaviour of genes during plant breeding for the purpose of giving students a broad understanding of quantitative genetics.  It is a web-based application, written as a complement to the qualitative component, YellowLeaf.
+
+
+--------------------------------------------------------------------------------------------
+2.1 Product Perspective
+--------------------------------------------------------------------------------------------
+
+This system is a web-based application, which will be linked to a database.  The database will manage all of the data and files associated with the program.  The system can be accessed via three roles: administrator, professor, and student (*** TA role is optional).  The administrator will have the highest privelages, allowing actions such as 'Create Student', 'Create Professor', and 'Create Class'.  A professor will have full privelages pertaining to their course, in order to create problems, assign problems, and view progress.  Students will have access only to their problems and will only be able to view their own account information.
+
+This application is written as a counterpart to YellowLeaf, and covers quantitative genetics.  As these two applications are to be combined, this application will follow many conventions set by the previous program.  Such conventions are layout and design of the application.  Also, compononents of the database must be available to both applications.  For instance, identical logins and passwords will be used accross both applications so login for one program will allow access for both components (no need to re-login).
+
+--------------------------------------------------------------------------------------------
+2.2 Product Functions
+--------------------------------------------------------------------------------------------
+
+create problem
+ -input values for # of effective factors, mean and variance of parent 1, mean and variance of parent 2, and 
+  heritability
+delete problem
+assign problem
+open problem
+ -open problem to create breedings and solve for desired values
+ -once a problem is open, the student will be presented with a grid of plants representative of the values inputted
+  by the professor or administrator
+ -alongside the grid of plants will be two histograms, measuring both desired traits
+submit problem
+
+create ta
+delete ta
+
+create course
+reset course
+delete course
+
+creat prof
+delete prof
+
+create student
+delete student
+
+--------------------------------------------------------------------------------------------
+3.4 Logical Database Requirements
+--------------------------------------------------------------------------------------------
+
+** ER diagram **
+
+--------------------------------------------------------------------------------------------
+4. Change Management Process
+--------------------------------------------------------------------------------------------
+
+For any changes requested, either by the client, instructor, or other team members, the following process must be followed:
+
+1) Any changes requested should be presented as a hard-copy request containing a detailed description of the change.  This hard-copy can be made by either the person requesting the change or any member of the team who is present at the time of the request.
+
+2) This hard-copy request should be presented to the risks manager who will assess the impact of implementing the request.
+
+3) If the request does not hinder other functions of the program, then he will pass it on to the progress manager.  He will assess whether or not it is feasible to include this request with the implementation on the current timeline.
+
+4) Finally, if the request is feasible on the current timeline, then the request will be presented to the PM for final approval.
+
+5) If necessary, the contact manager will notify the person requesting status of the status of the request.
+
+--------------------------------------------------------------------------------------------
+6. Supporting Information
+--------------------------------------------------------------------------------------------
+
+*** To be filled in later

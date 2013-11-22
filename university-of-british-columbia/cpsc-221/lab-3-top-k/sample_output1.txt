@@ -1,0 +1,172 @@
+//////////////////////////////////////////////////////////////////////////
+//	Name: Charles Bihis			Course: Cpsc 221	//
+//	Student #: 43180009			Class Section: 201	//
+//	Date: April 2, 2005			Lab Section: L2M	//
+//////////////////////////////////////////////////////////////////////////
+
+Sample Output 1
+
+valdes:~/cs221/lab3_L2M> make
+g++ -c MapBST.cpp
+g++ -c Pair.cpp
+g++ -c topk.cpp
+g++ -o topk MapBST.o Pair.o topk.o
+valdes:~/cs221/lab3_L2M> topk 10 < quotations
+Heap has been resized to hold up to 20 pairs/entries
+Heap has been resized to hold up to 40 pairs/entries
+Heap has been resized to hold up to 80 pairs/entries
+Heap has been resized to hold up to 160 pairs/entries
+
+The top 10 most frequently occuring words in the file are:
+1.      10 occurrences of:  from
+2.      9 occurrences of:  the
+3.      9 occurrences of:  to
+4.      4 occurrences of:  of
+5.      4 occurrences of:  a
+6.      3 occurrences of:  From
+7.      3 occurrences of:  always
+8.      2 occurrences of:  by
+9.      2 occurrences of:  can
+10.     2 occurrences of:  public
+
+After removing the top 10 items from the heap, there are 88 pairs left.
+valdes:~/cs221/lab3_L2M> 
+
+********************************************************************************
+
+valdes:~/cs221/lab3_L2M> topk < quotations
+Usage: topk <input int>
+valdes:~/cs221/lab3_L2M> 
+
+********************************************************************************
+
+valdes:~/cs221/lab3_L2M> topk 7
+hello
+my name is charles
+this is my lab
+my lab is lab 3
+^D
+The top 7 most frequently occuring words in the file are:
+1.      3 occurrences of:  is
+2.      3 occurrences of:  lab
+3.      3 occurrences of:  my
+4.      1 occurrences of:  charles
+5.      1 occurrences of:  this
+6.      1 occurrences of:  name
+7.      1 occurrences of:  3
+
+After removing the top 7 items from the heap, there are 1 pairs left.
+valdes:~/cs221/lab3_L2M>
+
+********************************************************************************
+
+valdes:~/cs221/lab3_L2M> topk 100 < quotations
+Heap has been resized to hold up to 20 pairs/entries
+Heap has been resized to hold up to 40 pairs/entries
+Heap has been resized to hold up to 80 pairs/entries
+Heap has been resized to hold up to 160 pairs/entries
+
+There are only 98 in the heap, not 100, so we'll only return 98.
+
+The top 98 most frequently occuring words in the file are:
+1.      10 occurrences of:  from
+2.      9 occurrences of:  the
+3.      9 occurrences of:  to
+4.      4 occurrences of:  of
+5.      4 occurrences of:  a
+6.      3 occurrences of:  From
+7.      3 occurrences of:  always
+8.      2 occurrences of:  by
+9.      2 occurrences of:  can
+10.     2 occurrences of:  public
+11.     2 occurrences of:  spiritual
+12.     2 occurrences of:  that
+13.     2 occurrences of:  democracy
+14.     2 occurrences of:  they
+15.     2 occurrences of:  exist
+16.     2 occurrences of:  great
+17.     1 occurrences of:  "The
+18.     1 occurrences of:  Fall
+19.     1 occurrences of:  loss
+20.     1 occurrences of:  vote
+21.     1 occurrences of:  treasury.
+22.     1 occurrences of:  treasury,
+23.     1 occurrences of:  Alexander
+24.     1 occurrences of:  world's
+25.     1 occurrences of:  sequence:
+26.     1 occurrences of:  and
+27.     1 occurrences of:  selfishness
+28.     1 occurrences of:  result
+29.     1 occurrences of:  responsibility,
+30.     1 occurrences of:  complacency
+31.     1 occurrences of:  promising
+32.     1 occurrences of:  progressed
+33.     1 occurrences of:  permanent
+34.     1 occurrences of:  until
+35.     1 occurrences of:  only
+36.     1 occurrences of:  on,
+37.     1 occurrences of:  candidates
+38.     1 occurrences of:  with
+39.     1 occurrences of:  most
+40.     1 occurrences of:  moment
+41.     1 occurrences of:  majority
+42.     1 occurrences of:  liberty;
+43.     1 occurrences of:  liberty
+44.     1 occurrences of:  largesse
+45.     1 occurrences of:  in
+46.     1 occurrences of:  have
+47.     1 occurrences of:  has
+48.     1 occurrences of:  before
+49.     1 occurrences of:  them
+50.     1 occurrences of:  been
+51.     1 occurrences of:  form
+52.     1 occurrences of:  for
+53.     1 occurrences of:  followed
+54.     1 occurrences of:  fiscal
+55.     1 occurrences of:  faith;
+56.     1 occurrences of:  faith
+57.     1 occurrences of:  dependency
+58.     1 occurrences of:  discover
+59.     1 occurrences of:  dictatorship.
+60.     1 occurrences of:  dependency;
+61.     1 occurrences of:  this
+62.     1 occurrences of:  themselves
+63.     1 occurrences of:  decline
+64.     1 occurrences of:  courage;
+65.     1 occurrences of:  years.
+66.     1 occurrences of:  complacency;
+67.     1 occurrences of:  again
+68.     1 occurrences of:  collapses
+69.     1 occurrences of:  over
+70.     1 occurrences of:  cannot
+71.     1 occurrences of:  nations
+72.     1 occurrences of:  A
+73.     1 occurrences of:  bondage.
+74.     1 occurrences of:  bondage
+75.     1 occurrences of:  benefits
+76.     1 occurrences of:  government.
+77.     1 occurrences of:  The
+78.     1 occurrences of:  back
+79.     1 occurrences of:  average
+80.     1 occurrences of:  votes
+81.     1 occurrences of:  apathy;
+82.     1 occurrences of:  apathy
+83.     1 occurrences of:  1776
+84.     1 occurrences of:  voters
+85.     1 occurrences of:  Fraser
+86.     1 occurrences of:  civilizations
+87.     1 occurrences of:  abundance
+88.     1 occurrences of:  Tytler,
+89.     1 occurrences of:  These
+90.     1 occurrences of:  200
+91.     1 occurrences of:  as
+92.     1 occurrences of:  It
+93.     1 occurrences of:  selfishness;
+94.     1 occurrences of:  abundance;
+95.     1 occurrences of:  Decline
+96.     1 occurrences of:  Republic",
+97.     1 occurrences of:  courage
+98.     1 occurrences of:  Athenian
+
+After removing the top 98 items from the heap, there are 0 pairs left.
+valdes:~/cs221/lab3_L2M> 

@@ -1,0 +1,19 @@
+# makefile 1 - makeRules
+# cpsc 213 lab 2 - decoder
+
+decoder: decoder_driver.o decoder.o dsupport.o endian.o
+	gcc -g -o decoder decoder_driver.o decoder.o dsupport.o endian.o
+
+decoder_driver.o: decoder_driver.c
+	gcc -g -c decoder_driver.c
+
+decoder.o: decoder.c decoder.h greetings.h
+	gcc -g -c decoder.c
+
+dsupport.o: dsupport.c dsupport.h endian.h
+	gcc -g -c dsupport.c
+
+endian.o: endian.c endian.h
+	gcc -g -c endian.c
+
+# End of makefile makeRules

@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<script language="JavaScript">
+
+function showit() { 
+var obj = document.getElementById('div1');
+obj.style.display = "block";
+}
+
+function hideit() { 
+var obj = document.getElementById('div1');
+obj.style.display = "none";
+}
+
+</script>
+<p>Note: include javascript for form validation? or check on server side?<br>
+<a href="#" onClick="showit();">Create TA</a> | <a href="#" onClick="hideit();">
+Hide Create functions</a> </p>
+<div id="div1" style="display:none">
+  <form method="POST" action>
+  </form>
+  <table>
+    <tr>
+      <td><b>Create TA</b>
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" id="AutoNumber1">
+        <tr>
+          <td>First Name&nbsp;</td>
+          <td><input type="text" name="firstname" size="30"></td>
+        </tr>
+        <tr>
+          <td>Last Name&nbsp;</td>
+          <td><input type="text" name="lastname" size="30"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="Submit" name="B1">
+          <input type="reset" value="Reset" name="B2"> </td>
+        </tr>
+      </table>
+      <form>
+      </form>
+      </td>
+    </tr>
+  </table>
+</div>
+<form method="POST" action>
+  <table class="listing" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+    <tr>
+      <th>Select&nbsp;</th>
+      <th>First Name&nbsp;</th>
+      <th>Last Name &nbsp;</th>
+      <th>Password&nbsp;</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="profid1" value="ON"></td>
+      <td>
+      <a href="viewta.php?id=1">
+      michael</a></td>
+      <td>smith</td>
+      <td>1234</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="profid2" value="ON"></td>
+      <td>
+      <a href="viewta.php?id=2">
+      jane</a></td>
+      <td>smith</td>
+      <td>1234</td>
+    </tr>
+    <tr>
+      <td colspan="4"><input type="submit" value="delete" name="deletebut">
+      <input type="reset" value="reset" name="B2"> </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+
+</html>

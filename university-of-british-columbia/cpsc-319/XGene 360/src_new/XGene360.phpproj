@@ -1,0 +1,600 @@
+"General"
+{
+"ProjectIdGuid" = "{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}"
+"ProjectVersion" = "1.3.0.2064"
+}
+"Configurations"
+{
+    "Local|Php 4"
+    {
+    "DebugMode" = "Builtin"
+    "DebugType" = "Php"
+    "StartPage" = "login.php"
+    "RootUrl" = ""
+    "BrowserType" = "IE"
+    "PhpIniFilePath" = ""
+    "ApachePortNumber" = "15382"
+    "ApacheTemplateFileName" = ""
+    "DeploymentType" = "FTP"
+    "LocalDeploymentDir" = ""
+    "FtpServer" = "ftp.khronology.com"
+    "FtpUserName" = "xgene360@khronology.com"
+    "FtpPassword" = "xgene360"
+    "FtpDirectory" = "/"
+    "SftpServer" = ""
+    "SftpUserName" = ""
+    "SftpPassword" = ""
+    "SftpDirectory" = ""
+    "IncludeDirs" = ""
+    }
+    "Local|Php 5"
+    {
+    "DebugMode" = "Builtin"
+    "DebugType" = "Mixed"
+    "StartPage" = ""
+    "RootUrl" = ""
+    "BrowserType" = "IE"
+    "PhpIniFilePath" = ""
+    "ApacheTemplateFileName" = ""
+    "LocalDeploymentDir" = ""
+    "FtpServer" = ""
+    "FtpUserName" = ""
+    "FtpPassword" = ""
+    "FtpDirectory" = ""
+    "SftpServer" = ""
+    "SftpUserName" = ""
+    "SftpPassword" = ""
+    "SftpDirectory" = ""
+    "IncludeDirs" = ""
+    }
+    "Remote|Php 4"
+    {
+    "DebugMode" = "External"
+    "DebugType" = "Mixed"
+    "StartPage" = "admin/managecourses.php"
+    "RootUrl" = "http://xgene360.khronology.com/login.php"
+    "BrowserType" = "IE"
+    "PhpIniFilePath" = ""
+    "ApachePortNumber" = "8197"
+    "ApacheTemplateFileName" = ""
+    "DeploymentType" = "FTP"
+    "LocalDeploymentDir" = ""
+    "FtpServer" = "ftp.khronology.com"
+    "FtpUserName" = "xgene360@khronology.com"
+    "FtpPassword" = "xgene360"
+    "FtpDirectory" = "/"
+    "SftpServer" = ""
+    "SftpUserName" = ""
+    "SftpPassword" = ""
+    "SftpDirectory" = ""
+    "IncludeDirs" = ""
+    }
+    "Remote|Php 5"
+    {
+    "DebugMode" = "Builtin"
+    "DebugType" = "Mixed"
+    "StartPage" = ""
+    "RootUrl" = ""
+    "BrowserType" = "IE"
+    "PhpIniFilePath" = ""
+    "ApacheTemplateFileName" = ""
+    "LocalDeploymentDir" = ""
+    "FtpServer" = ""
+    "FtpUserName" = ""
+    "FtpPassword" = ""
+    "FtpDirectory" = ""
+    "SftpServer" = ""
+    "SftpUserName" = ""
+    "SftpPassword" = ""
+    "SftpDirectory" = ""
+    "IncludeDirs" = ""
+    }
+}
+"Files"
+{
+    "admin\\createproblem.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\managecourses.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\manageproblems.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\manageprofessors.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\managestudents.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\managetas.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\viewcourse.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\viewproblem.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\viewprofessor.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\viewstudent.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\viewstudentsolution.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin\\viewta.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\assignproblemmanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\assignprofessormanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\assignstudentmanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\assigntamanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\coursemanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\dbmanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\generationmanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\loginmanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\problemmanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\professormanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\studentmanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\tamanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\db\\usermanager.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\cookiehandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\errorhandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\linkhandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\messagehandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\pagehandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\userhandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\log\\log.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\renderer\\histogramrenderer.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\simulator\\gene.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\simulator\\normalgenerator.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\css\\histogram.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\css\\styles.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\images\\footer.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\images\\header.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\images\\rightbar.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\common.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\createproblem.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\cu.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\histogram.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\login.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\managecourse.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\manageproblem.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\manageprofessors.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\managestudent.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\manageta.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\plant.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\viewgeneration.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\config.inc.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\footer.inc.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\global.inc.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\header.inc.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\navi.inc.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf01_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf02_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf03_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf04_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf05_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf06_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf07_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf08_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf09_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf10_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\left\\leaf11_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf01_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf02_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf03_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf04_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf05_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf06_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf07_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf08_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf09_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf10_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf\\right\\leaf11_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf01_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf02_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf03_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf04_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf05_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf06_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf07_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf08_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf09_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf10_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\left\\leaf11_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf01_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf02_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf03_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf04_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf05_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf06_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf07_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf08_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf09_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf10_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\leaf_alpha\\right\\leaf11_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\pots\\pot_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\pots\\pot_ab.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\pots\\pot_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\pots_alpha\\pot_a.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\pots_alpha\\pot_ab.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\pots_alpha\\pot_b.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\shelf\\shelf_bottomleft.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\shelf\\shelf_bottomright.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\shelf\\shelf_level.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\shelf\\shelf_sideleft.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\shelf\\shelf_sideright.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\shelf\\shelf_topleft.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\shelf\\shelf_topright.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\images\\spin.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\submitproblem.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\viewgeneration.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\viewproblem.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\viewproblems.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "student\\viewsolution.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "changepassword.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "login.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "logout.php"
+    {
+    "ProjRelPath" = "T"
+    }
+}
+"ProjStartupServices"
+{
+}
+"Globals"
+{
+}
+"References"
+{
+}

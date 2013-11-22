@@ -1,0 +1,43 @@
+What we did...
+  -articulated joint movements (key listeners for most joints)
+  -dynamic camera views
+  -transparency
+  -culling and clipping panes to make scene
+  -anti-aliasing for wire-frame mode
+  -fog
+  -skybox
+  -lighting
+  -spotlighting
+
+
+What is in the demo...
+  -transformations (full transformations and partial backflip)
+  -dynamic camera views (trying to emulate FPS type camera controls)
+  -transparency
+  -culling and clipping
+  -anti-aliasing for wire-frame mode
+  -fog (default is disabled)
+  -skybox
+  -lighting
+  -particle system (to simulate sparks coming from shoulders while rotating arms)
+
+
+What is not in the demo...
+  -lighting
+  -spotlighting
+    *lights just interfered with the skybox for some reason
+  -skybox with star texture (too dark without lighting)
+  -particle system with textured sparks (orange and with position relative to character)
+
+
+What we wanted to do...
+  -model head, hands, and weapons
+  -sound using openal
+  -texture the particles
+  -better camera actions
+  -reflections on chest plate
+  -shadows
+  -texture actual figure
+  -limit fog to outside the dome
+  -have the skybox and the lights on at the same time
+  -collision detection

@@ -1,0 +1,23 @@
+# makefile 3
+# cpsc 213 lab 2 - xdr
+# Concepts introduced: Advanced features of a makefile
+
+CC=	gcc
+CFLAGS=	-g 
+PROG=   xdr
+SRCS=   xdr.c endian.c
+OBJS=	$(SRCS:.c=.o)
+
+$(PROG): $(OBJS)
+	$(CC) $(CFLAGS) -o $(PROG) $(OBJS) 
+
+
+#add a pattern rule after this line to compile a .o file from 
+#a .c file
+
+
+#Dependencies go here
+xdr.o: endian.h
+endian.o: endian.h
+
+# End of makefile makePattern

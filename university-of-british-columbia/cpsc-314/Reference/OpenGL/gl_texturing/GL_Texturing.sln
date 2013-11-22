@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GL_Texturing", "GL_Texturing.vcproj", "{3EA33416-F8CF-448A-894B-338754B7413F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3EA33416-F8CF-448A-894B-338754B7413F}.Debug.ActiveCfg = Debug|Win32
+		{3EA33416-F8CF-448A-894B-338754B7413F}.Debug.Build.0 = Debug|Win32
+		{3EA33416-F8CF-448A-894B-338754B7413F}.Release.ActiveCfg = Release|Win32
+		{3EA33416-F8CF-448A-894B-338754B7413F}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

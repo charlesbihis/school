@@ -1,0 +1,8 @@
+Steve Adams: 65 45 4 7 10.0 1.5 3.2 2 6
+Jill Anne Connors: 85 47 3 8 9 10 2 7 8
+Elvis: 72 33 0 1 8 9 10 9 9
+Mike LeBlanc: 88 45 9.3 8.1 6 7 3.5 7.8 9.1
+Joe Burt: 22 12 0 0 3 2.1 0 1 10
+Elanor Johnson: 70 43 8 5 7 6 9.3 10 9.9
+Elena Lee: 72 44 8.2 4.6 7.3 7 8 9 9.9
+

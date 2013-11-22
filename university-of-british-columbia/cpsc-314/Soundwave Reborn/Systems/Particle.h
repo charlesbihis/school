@@ -1,0 +1,84 @@
+/*
+Author: Charles Bihis
+Website: www.charlesbihis.com
+Contact: admin@charlesbihis.com
+
+
+Please read this Source Code License Agreement carefully before using
+the source code.
+
+You agree to indemnify, hold harmless and defend the author from and
+against any loss, damage, claims or lawsuits, including attorney's
+fees that arise or result from your use or distribution of the source
+code.
+	
+THIS SOURCE CODE IS PROVIDED "AS IS" AND "WITH ALL FAULTS", WITHOUT
+ANY TECHNICAL SUPPORT OR ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING,
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. ALSO, THERE IS NO WARRANTY OF
+NON-INFRINGEMENT, TITLE OR QUIET ENJOYMENT. IN NO EVENT SHALL THE AUTHOR
+OR ITS SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOURCE CODE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+
+
+#ifndef PARTICLE_H
+#define PARTICLE_H
+
+
+typedef struct
+{
+		// colour
+	float red;
+	float green;
+	float blue;
+		// position
+	float x;
+	float y;
+	float z;
+		// velocity
+	float vx;
+	float vy;
+	float vz;
+		// lifespan
+	float life;
+
+} Particle; 
+
+
+class ParticleSystem
+{
+	public:
+		ParticleSystem(int maxNum, float spread, float lifespan, float vx, float vy, float vz, float ax, float ay,	float az, float r, float g, float b);
+		~ParticleSystem();
+		void DrawParticles();
+		void Update();
+		void ResetParticle(int index);
+		Particle GetParticle(int index);
+
+		float r;
+		float g;
+		float b;
+
+	private: 
+		Particle *particles;
+		int max_particles;
+		float spread;
+		float vx; 
+		float vy;
+		float vz;
+		float ax;
+		float ay;
+		float az;
+		float lifespan;
+
+		float RandomNum(float upperbound, float lowerbound);
+};
+
+#endif

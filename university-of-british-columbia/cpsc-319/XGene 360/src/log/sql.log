@@ -1,0 +1,219 @@
+['2006-03-20 23:47:25'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'height'
+								                trait_B_name = \nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'your problem 2',
+								                problem_desc = 'bye'
+								                trait_A_name = 'height'
+								                trait_B_name = 'weight'
+								                course_id = ''
+								                professor_id = ''
+							                WHERE problem_id = 2;
+['2006-03-20 23:50:13'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'height'
+								                trait_B_name = \nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'your problem 2',
+								                problem_desc = 'bye'
+								                trait_A_name = 'height'
+								                trait_B_name = 'weight'
+								                course_id = ''
+								                professor_id = ''
+							                WHERE problem_id = 2;
+['2006-03-20 23:53:37'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'height'
+								                trait_B_name = \nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'your problem 2',
+								                problem_desc = 'bye'
+								                trait_A_name = 'height'
+								                trait_B_name = 'weight'
+								                course_id = ''
+								                professor_id = ''
+							                WHERE problem_id = 2;
+['2006-03-20 23:53:59'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+								                trait_B_n\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+								                trait_A_name = 'trait a name'
+								                trait_B_name = 'trait b name'
+								                course_id = '1'
+								                professor_id = 'Charles'
+							                WHERE problem_id = 1;
+['2006-03-20 23:55:19'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+								                trait_B_n\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+								                trait_A_name = 'trait a name'
+								                trait_B_name = 'trait b name'
+								                course_id = '1'
+								                professor_id = 'Charles'
+							                WHERE problem_id = 1;
+['2006-03-20 23:55:36'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+								                trait_B_n\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+								                trait_A_name = 'trait a name'
+								                trait_B_name = 'trait b name'
+								                course_id = '1'
+								                professor_id = 'Charles'
+							                WHERE problem_id = 1;
+['2006-03-20 23:57:08'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+								                trait_B_n\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+								                trait_A_name = 'trait a name'
+								                trait_B_name = 'trait b name'
+								                course_id = ''
+								                professor_id = ''
+							                WHERE problem_id = 1;
+['2006-03-20 23:57:49'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+								                trait_B_n\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+								                trait_A_name = 'trait a name'
+								                trait_B_name = 'trait b name'
+
+							                WHERE problem_id = 1;
+['2006-03-20 23:57:52'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+								                trait_B_n\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+								                trait_A_name = 'trait a name'
+								                trait_B_name = 'trait b name'
+
+							                WHERE problem_id = 1;
+['2006-03-20 23:58:02'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+								                trait_B_n\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hiaa'
+								                trait_A_name = 'trait a name'
+								                trait_B_name = 'trait b name'
+
+							                WHERE problem_id = 1;
+['2006-03-20 23:58:10'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'height'
+								                trait_B_name = \nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'your problem 2',
+								                problem_desc = 'byea'
+								                trait_A_name = 'height'
+								                trait_B_name = 'weight'
+
+							                WHERE problem_id = 2;
+['2006-03-20 23:58:54'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'height'
+								                trait_B_name = \nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'your problem 2',
+								                problem_desc = 'byea'
+								                trait_A_name = 'height'
+								                trait_B_name = 'weight'
+							                WHERE problem_id = 2;
+['2006-03-20 23:58:56'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'height'
+								                trait_B_name = \nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'your problem 2',
+								                problem_desc = 'bye'
+								                trait_A_name = 'height'
+								                trait_B_name = 'weight'
+							                WHERE problem_id = 2;
+['2006-03-21 00:34:55'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+								                trait_B_n\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hi'
+								                trait_A_name = 'trait a name'
+								                trait_B_name = 'trait b name'
+							                WHERE problem_id = 1;
+['2006-03-21 00:36:16'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+							                WHERE prob\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+												trait_A_name = 'trait a name'
+							                WHERE problem_id = 1;
+['2006-03-21 00:36:19'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'trait a name'
+							                WHERE prob\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+												trait_A_name = 'trait a name'
+							                WHERE problem_id = 1;
+['2006-03-21 00:39:38'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trait_A_name = 'traita'
+							                WHERE problem_id\nUPDATE XG_ProblemTraitMadeFor 
+							                SET problem_name = 'my problem 1',
+								                problem_desc = 'hia'
+												trait_A_name = 'traita'
+							                WHERE problem_id = 1;
+['2006-03-21 01:48:30'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'b name, trait_A_name = '1', trait_B_name = '', trait_A_unit = ''\nUPDATE XG_ProblemTraitMadeFor SET problem_name = 'my problem 1', problem_desc = 'hi', professor_id = 'trait a name', course_id = trait b name, trait_A_name = '1', trait_B_name = '', trait_A_unit = '', trait_B_unit = '', trait_A_number_of_genes = , trait_B_number_of_genes = , trait_A_h2 = , trait_B_h2 = , trait_A_var = , trait_B_var = , trait_A_parent_A_mean = , trait_A_parent_B_mean = , trait_B_parent_A_mean = , trait_B_parent_B_mean = , number_of_progeny_per_cross = , max_cross = , number_of_displayed_plants = , range_of_acceptance = , start_date = '' due_date = '') WHERE problem_id = 1
+['2006-03-21 02:29:24'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' trait_A_h2 = 0.1, trait_B_h2 = 0.2, trait_A_var = 0.3, trait_B_\nUPDATE XG_ProblemTraitMadeFor SET problem_name = 'my problem 1', problem_desc = 'hi', professor_id = '', course_id = 1, trait_A_name = '', trait_B_name = '', trait_A_unit = 'trait a unit', trait_B_unit = 'trait b unit', trait_A_number_of_genes = 1, trait_B_number_of_genes = , trait_A_h2 = 0.1, trait_B_h2 = 0.2, trait_A_var = 0.3, trait_B_var = 0.4, trait_A_parent_A_mean = 1, trait_A_parent_B_mean = 2, trait_B_parent_A_mean = 3, trait_B_parent_B_mean = 4, number_of_progeny_per_cross = 100, max_cross = 100, number_of_displayed_plants = 100, range_of_acceptance = , start_date = '' due_date = '') WHERE problem_id = 1
+['2006-03-21 02:30:04'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' trait_A_h2 = 0.1, trait_B_h2 = 0.2, trait_A_var = 0.3, trait_B_\nUPDATE XG_ProblemTraitMadeFor SET problem_name = 'my problem 1', problem_desc = 'hia', professor_id = '', course_id = 1, trait_A_name = 'trait a name', trait_B_name = 'trait b name', trait_A_unit = 'trait a unit', trait_B_unit = 'trait b unit', trait_A_number_of_genes = 1, trait_B_number_of_genes = , trait_A_h2 = 0.1, trait_B_h2 = 0.2, trait_A_var = 0.3, trait_B_var = 0.4, trait_A_parent_A_mean = 1, trait_A_parent_B_mean = 2, trait_B_parent_A_mean = 3, trait_B_parent_B_mean = 4, number_of_progeny_per_cross = 100, max_cross = 100, number_of_displayed_plants = 100, range_of_acceptance = , start_date = '' due_date = '') WHERE problem_id = 1
+['2006-03-21 02:30:27'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' start_date = '' due_date = '') WHERE problem_id = 1' at line 1\nUPDATE XG_ProblemTraitMadeFor SET problem_name = 'my problem 1', problem_desc = 'hia', professor_id = '', course_id = 1, trait_A_name = 'trait a name', trait_B_name = 'trait b name', trait_A_unit = 'trait a unit', trait_B_unit = 'trait b unit', trait_A_number_of_genes = 1, trait_B_number_of_genes = 2, trait_A_h2 = 0.1, trait_B_h2 = 0.2, trait_A_var = 0.3, trait_B_var = 0.4, trait_A_parent_A_mean = 1, trait_A_parent_B_mean = 2, trait_B_parent_A_mean = 3, trait_B_parent_B_mean = 4, number_of_progeny_per_cross = 100, max_cross = 100, number_of_displayed_plants = 100, range_of_acceptance = , start_date = '' due_date = '') WHERE problem_id = 1
+['2006-03-21 02:31:38'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'due_date = '') WHERE problem_id = 1' at line 1\nUPDATE XG_ProblemTraitMadeFor SET problem_name = 'my problem 1', problem_desc = 'hia', professor_id = '', course_id = 1, trait_A_name = 'trait a name', trait_B_name = 'trait b name', trait_A_unit = 'trait a unit', trait_B_unit = 'trait b unit', trait_A_number_of_genes = 1, trait_B_number_of_genes = 2, trait_A_h2 = 0.1, trait_B_h2 = 0.2, trait_A_var = 0.3, trait_B_var = 0.4, trait_A_parent_A_mean = 1, trait_A_parent_B_mean = 2, trait_B_parent_A_mean = 3, trait_B_parent_B_mean = 4, number_of_progeny_per_cross = 100, max_cross = 100, number_of_displayed_plants = 100, range_of_acceptance = 5.5, start_date = '' due_date = '') WHERE problem_id = 1
+['2006-03-21 17:29:10'] 1062: Duplicate entry '8fb565e13fcc7bfb86c990d9c31e656d' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('8fb565e13fcc7bfb86c990d9c31e656d')
+['2006-03-21 17:29:34'] 1062: Duplicate entry '8fb565e13fcc7bfb86c990d9c31e656d' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('8fb565e13fcc7bfb86c990d9c31e656d')
+['2006-03-21 17:29:51'] 1062: Duplicate entry '8fb565e13fcc7bfb86c990d9c31e656d' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('8fb565e13fcc7bfb86c990d9c31e656d')
+['2006-03-21 17:33:05'] 1062: Duplicate entry '992d5bc9a4a042c52af1ff02226807db' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('992d5bc9a4a042c52af1ff02226807db')
+['2006-03-21 17:36:06'] 1062: Duplicate entry '251a7dff70167629058a2f1a367a6795' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('251a7dff70167629058a2f1a367a6795')
+['2006-03-21 17:44:14'] 1062: Duplicate entry '051dfc5429d4509b3a2af8e50645525a' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('051dfc5429d4509b3a2af8e50645525a')
+['2006-03-21 17:45:01'] 1062: Duplicate entry '051dfc5429d4509b3a2af8e50645525a' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('051dfc5429d4509b3a2af8e50645525a')
+['2006-03-21 17:45:19'] 1062: Duplicate entry '051dfc5429d4509b3a2af8e50645525a' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('051dfc5429d4509b3a2af8e50645525a')
+['2006-03-21 17:45:36'] 1062: Duplicate entry '051dfc5429d4509b3a2af8e50645525a' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('051dfc5429d4509b3a2af8e50645525a')
+['2006-03-21 17:46:16'] 1062: Duplicate entry '051dfc5429d4509b3a2af8e50645525a' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('051dfc5429d4509b3a2af8e50645525a')
+['2006-03-21 17:46:24'] 1062: Duplicate entry '051dfc5429d4509b3a2af8e50645525a' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('051dfc5429d4509b3a2af8e50645525a')
+['2006-03-21 17:47:14'] 1062: Duplicate entry '051dfc5429d4509b3a2af8e50645525a' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('051dfc5429d4509b3a2af8e50645525a')
+['2006-03-21 17:47:28'] 1062: Duplicate entry '051dfc5429d4509b3a2af8e50645525a' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('051dfc5429d4509b3a2af8e50645525a')
+['2006-03-21 18:21:02'] 1062: Duplicate entry '69ca4dc90050760c417573a767e3ff9f' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('69ca4dc90050760c417573a767e3ff9f')
+['2006-03-21 18:21:07'] 1062: Duplicate entry '69ca4dc90050760c417573a767e3ff9f' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('69ca4dc90050760c417573a767e3ff9f')
+['2006-03-21 18:25:36'] 1062: Duplicate entry '23a743dce6f6afab5c428092ad81ab73' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('23a743dce6f6afab5c428092ad81ab73')
+['2006-03-21 18:25:53'] 1062: Duplicate entry '089a3aa94411996dbc967ffc4da09b8f' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('089a3aa94411996dbc967ffc4da09b8f')
+['2006-03-21 18:27:13'] 1062: Duplicate entry '089a3aa94411996dbc967ffc4da09b8f' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('089a3aa94411996dbc967ffc4da09b8f')
+['2006-03-21 18:28:40'] 1062: Duplicate entry '089a3aa94411996dbc967ffc4da09b8f' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('089a3aa94411996dbc967ffc4da09b8f')
+['2006-03-21 19:50:23'] 1062: Duplicate entry '7b64f11acf9dd9808aecdc2e612e62c4' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('7b64f11acf9dd9808aecdc2e612e62c4')
+['2006-03-21 20:03:17'] 1062: Duplicate entry 'c14f93306a2a79f3ad78a951b36cd367' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('c14f93306a2a79f3ad78a951b36cd367')
+['2006-03-21 20:04:04'] 1062: Duplicate entry '2f882d3834c5d1c6912820b9bef8046f' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('2f882d3834c5d1c6912820b9bef8046f')
+['2006-03-22 20:11:30'] 2003: Can't connect to MySQL server on 'localhost' (10061)
+['2006-03-22 20:27:23'] 1062: Duplicate entry 'b73da74292ddbde0252b4fc982fd99b3' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('b73da74292ddbde0252b4fc982fd99b3')
+['2006-03-22 20:29:37'] 1062: Duplicate entry 'b1739625fcf49cbbf90ad285163af1bc' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('b1739625fcf49cbbf90ad285163af1bc')
+['2006-03-22 20:29:47'] 1062: Duplicate entry 'b1739625fcf49cbbf90ad285163af1bc' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('b1739625fcf49cbbf90ad285163af1bc')
+['2006-03-22 20:30:16'] 1062: Duplicate entry 'b1739625fcf49cbbf90ad285163af1bc' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('b1739625fcf49cbbf90ad285163af1bc')
+['2006-03-22 20:30:25'] 1062: Duplicate entry 'b1739625fcf49cbbf90ad285163af1bc' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('b1739625fcf49cbbf90ad285163af1bc')
+['2006-03-22 20:32:28'] 1062: Duplicate entry 'b1739625fcf49cbbf90ad285163af1bc' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('b1739625fcf49cbbf90ad285163af1bc')
+['2006-03-22 20:37:35'] 1062: Duplicate entry 'bd0b6e452e10c6462d6f4e2653ccf852' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('bd0b6e452e10c6462d6f4e2653ccf852')
+['2006-03-22 20:39:49'] 1062: Duplicate entry 'bd0b6e452e10c6462d6f4e2653ccf852' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('bd0b6e452e10c6462d6f4e2653ccf852')
+['2006-03-22 20:40:22'] 1062: Duplicate entry 'bd0b6e452e10c6462d6f4e2653ccf852' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('bd0b6e452e10c6462d6f4e2653ccf852')
+['2006-03-22 22:49:38'] 1054: Unknown column 'P.prof_id' in 'where clause'\nSELECT P.problem_name, P.problem_id
+									FROM XG_ProblemTraitMadeFor P, User U
+									WHERE P.prof_id = U.UserId
+										AND U.PrivilegeLvl = 1
+										AND U.UserId = 'prof_Joe';
+['2006-03-22 22:50:22'] 1054: Unknown column 'P.prof_id' in 'where clause'\nSELECT P.problem_name, P.problem_id
+									FROM XG_ProblemTraitMadeFor P, User U
+									WHERE P.prof_id = U.UserId
+										AND U.PrivilegeLvl = 1
+										AND U.UserId = 'prof_Joe';
+['2006-03-22 22:50:50'] 1054: Unknown column 'P.prof_id' in 'where clause'\nSELECT P.problem_name, P.problem_id
+									FROM XG_ProblemTraitMadeFor P, User U
+									WHERE P.prof_id = U.UserId
+										AND U.PrivilegeLvl = 1
+										AND U.UserId = 'prof_Joe';
+['2006-03-22 23:16:56'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORM\nSELECT P.problem_id, P.problem_name, C.Name, P.DATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORMAT( P.due_date,'%M %e, %Y   %h:%i %p' ) AS due_date, S.student_count FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C, ( SELECT COUNT( A.student_id ) AS student_count WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-22 23:18:18'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORM\nSELECT P.problem_id, P.problem_name, C.Name, P.DATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORMAT( P.due_date,'%M %e, %Y   %h:%i %p' ) AS due_date, S.student_count FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C, ( SELECT COUNT( A.student_id ) AS student_count, P.problem_id FROM XG_ProblemTraitMadeFor P LEFT OUTER JOIN XG_Assigns A ON P.problem_id = A.problem_id GROUP BY P.problem_id ) AS S WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-22 23:20:22'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORM\nSELECT P.problem_id, P.problem_name, C.NameDATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORMAT( P.due_date,'%M %e, %Y   %h:%i %p' ) AS due_date, S.student_count FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C, ( SELECT COUNT( A.student_id ) AS student_count, P.problem_id FROM XG_ProblemTraitMadeFor P LEFT OUTER JOIN XG_Assigns A ON P.problem_id = A.problem_id GROUP BY P.problem_id ) AS S WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-22 23:20:24'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORM\nSELECT P.problem_id, P.problem_name, C.NameDATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORMAT( P.due_date,'%M %e, %Y   %h:%i %p' ) AS due_date, S.student_count FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C, ( SELECT COUNT( A.student_id ) AS student_count, P.problem_id FROM XG_ProblemTraitMadeFor P LEFT OUTER JOIN XG_Assigns A ON P.problem_id = A.problem_id GROUP BY P.problem_id ) AS S WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-22 23:26:53'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date\nSELECT P.problem_id, P.problem_name, C.Name DATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-22 23:27:39'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C WH\nSELECT P.problem_id, P.problem_name, C.Name, DATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORMAT( P.due_date,'%M %e, %Y   %h:%i %p' ) AS due_date, FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-22 23:28:56'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'XG_ProblemTraitMadeFor P LEFT OUTER JOIN XG_Assigns A ON P.probl\nSELECT P.problem_id, P.problem_name, C.Name, DATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORMAT( P.due_date,'%M %e, %Y   %h:%i %p' ) AS due_date FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C, ( SELECT COUNT( A.student_id ) AS student_countFROM XG_ProblemTraitMadeFor P LEFT OUTER JOIN XG_Assigns A ON P.problem_id = A.problem_id GROUP BY P.problem_id ) AS S WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-22 23:33:16'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id A\nSELECT P.problem_id, P.problem_name, C.Name, DATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORMAT( P.due_date,'%M %e, %Y   %h:%i %p' ) AS due_date FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C, WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-22 23:35:12'] 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id A\nSELECT P.problem_id, P.problem_name, C.Name, DATE_FORMAT( P.start_date,'%M %e, %Y   %h:%i %p' ) AS start_date, DATE_FORMAT( P.due_date,'%M %e, %Y   %h:%i %p' ) AS due_date FROM User U, XG_Assigns A, XG_ProblemTraitMadeFor P, Course C, WHERE P.problem_id = A.problem_id AND C.CourseId = P.course_id AND A.student_id = U.UserId AND U.UserId = 'st_two' ORDER BY P.problem_name
+['2006-03-23 00:37:59'] 1054: Unknown column 'P.prof_id' in 'where clause'\nSELECT P.problem_name, P.problem_id
+									FROM XG_ProblemTraitMadeFor P, User U
+									WHERE P.prof_id = U.UserId
+										AND U.PrivilegeLvl = 1
+										AND U.UserId = 'prof_Joe';
+['2006-03-23 00:38:07'] 1054: Unknown column 'P.prof_id' in 'where clause'\nSELECT P.problem_name, P.problem_id
+									FROM XG_ProblemTraitMadeFor P, User U
+									WHERE P.prof_id = U.UserId
+										AND U.PrivilegeLvl = 1
+										AND U.UserId = 'prof_Joe';
+['2006-03-23 20:40:17'] 1062: Duplicate entry '' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('')
+['2006-03-23 20:43:15'] 1062: Duplicate entry 'a4677bb45effaac315e823d4863aa023' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('a4677bb45effaac315e823d4863aa023')
+['2006-03-23 20:43:19'] 1062: Duplicate entry '' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('')
+['2006-03-23 20:43:24'] 1062: Duplicate entry 'a4677bb45effaac315e823d4863aa023' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('a4677bb45effaac315e823d4863aa023')
+['2006-03-23 20:43:27'] 1062: Duplicate entry 'a4677bb45effaac315e823d4863aa023' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('a4677bb45effaac315e823d4863aa023')
+['2006-03-23 20:43:30'] 1062: Duplicate entry 'a4677bb45effaac315e823d4863aa023' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('a4677bb45effaac315e823d4863aa023')
+['2006-03-23 20:43:34'] 1062: Duplicate entry '' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('')
+['2006-03-23 20:43:37'] 1062: Duplicate entry '' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('')
+['2006-03-23 20:43:40'] 1062: Duplicate entry '' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('')
+['2006-03-23 20:43:47'] 1062: Duplicate entry '' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('')
+['2006-03-23 20:43:59'] 1062: Duplicate entry '' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('')
+['2006-03-23 21:28:55'] 1065: Query was empty\n
+['2006-03-23 22:06:22'] 1062: Duplicate entry '6d665071dc85033fd009c71f127bffba' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('6d665071dc85033fd009c71f127bffba')
+['2006-03-23 22:07:15'] 1062: Duplicate entry '6d665071dc85033fd009c71f127bffba' for key 1\nINSERT INTO XG_Locks(serial_id) VALUES('6d665071dc85033fd009c71f127bffba')

@@ -1,0 +1,1 @@
+DinoFinal turnHeadAndTailRight.how restToStandOnBackLegs.how danceFromSideToSide.how swipeTailAndBendNeck.how walkOnSpot.how walkOnSpot.how walkOnSpot.how walkOnSpot.how

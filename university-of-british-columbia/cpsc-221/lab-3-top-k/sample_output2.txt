@@ -1,0 +1,124 @@
+//////////////////////////////////////////////////////////////////////////
+//	Name: Charles Bihis			Course: Cpsc 221	//
+//	Student #: 43180009			Class Section: 201	//
+//	Date: April 2, 2005			Lab Section: L2M	//
+//////////////////////////////////////////////////////////////////////////
+
+Sample Output 2
+
+valdes:~/cs221/lab3_L2M> topk 20 < sun_tsu 
+Heap has been resized to hold up to 20 pairs/entries
+Heap has been resized to hold up to 40 pairs/entries
+Heap has been resized to hold up to 80 pairs/entries
+Heap has been resized to hold up to 160 pairs/entries
+Heap has been resized to hold up to 320 pairs/entries
+Heap has been resized to hold up to 640 pairs/entries
+Heap has been resized to hold up to 1280 pairs/entries
+Heap has been resized to hold up to 2560 pairs/entries
+Heap has been resized to hold up to 5120 pairs/entries
+
+The top 20 most frequently occuring words in the file are:
+1.      692 occurrences of:  the
+2.      402 occurrences of:  of
+3.      382 occurrences of:  to
+4.      316 occurrences of:  and
+5.      278 occurrences of:  is
+6.      227 occurrences of:  a
+7.      189 occurrences of:  be
+8.      178 occurrences of:  in
+9.      122 occurrences of:  you
+10.     120 occurrences of:  will
+11.     108 occurrences of:  are
+12.     95 occurrences of:  his
+13.     94 occurrences of:  not
+14.     92 occurrences of:  it
+15.     90 occurrences of:  your
+16.     86 occurrences of:  that
+17.     80 occurrences of:  for
+18.     77 occurrences of:  by
+19.     73 occurrences of:  on
+20.     67 occurrences of:  an
+
+After removing the top 20 items from the heap, there are 3579 pairs left.
+valdes:~/cs221/lab3_L2M> 
+
+********************************************************************************
+
+valdes:~/cs221/lab3_L2M> topk 5 < sun_tsu
+Heap has been resized to hold up to 20 pairs/entries
+Heap has been resized to hold up to 40 pairs/entries
+Heap has been resized to hold up to 80 pairs/entries
+Heap has been resized to hold up to 160 pairs/entries
+Heap has been resized to hold up to 320 pairs/entries
+Heap has been resized to hold up to 640 pairs/entries
+Heap has been resized to hold up to 1280 pairs/entries
+Heap has been resized to hold up to 2560 pairs/entries
+Heap has been resized to hold up to 5120 pairs/entries
+
+The top 5 most frequently occuring words in the file are:
+1.      692 occurrences of:  the
+2.      402 occurrences of:  of
+3.      382 occurrences of:  to
+4.      316 occurrences of:  and
+5.      278 occurrences of:  is
+
+After removing the top 5 items from the heap, there are 3594 pairs left.
+valdes:~/cs221/lab3_L2M> 
+
+********************************************************************************
+
+valdes:~/cs221/lab3_L2M> topk 40 < sun_tsu
+Heap has been resized to hold up to 20 pairs/entries
+Heap has been resized to hold up to 40 pairs/entries
+Heap has been resized to hold up to 80 pairs/entries
+Heap has been resized to hold up to 160 pairs/entries
+Heap has been resized to hold up to 320 pairs/entries
+Heap has been resized to hold up to 640 pairs/entries
+Heap has been resized to hold up to 1280 pairs/entries
+Heap has been resized to hold up to 2560 pairs/entries
+Heap has been resized to hold up to 5120 pairs/entries
+
+The top 40 most frequently occuring words in the file are:
+1.      692 occurrences of:  the
+2.      402 occurrences of:  of
+3.      382 occurrences of:  to
+4.      316 occurrences of:  and
+5.      278 occurrences of:  is
+6.      227 occurrences of:  a
+7.      189 occurrences of:  be
+8.      178 occurrences of:  in
+9.      122 occurrences of:  you
+10.     120 occurrences of:  will
+11.     108 occurrences of:  are
+12.     95 occurrences of:  his
+13.     94 occurrences of:  not
+14.     92 occurrences of:  it
+15.     90 occurrences of:  your
+16.     86 occurrences of:  that
+17.     80 occurrences of:  for
+18.     77 occurrences of:  by
+19.     73 occurrences of:  on
+20.     67 occurrences of:  an
+21.     67 occurrences of:  with
+22.     63 occurrences of:  he
+23.     62 occurrences of:  we
+24.     61 occurrences of:  The
+25.     60 occurrences of:  If
+26.     60 occurrences of:  or
+27.     59 occurrences of:  may
+28.     58 occurrences of:  enemy
+29.     58 occurrences of:  from
+30.     58 occurrences of:  army
+31.     55 occurrences of:  can
+32.     50 occurrences of:  which
+33.     48 occurrences of:  if
+34.     44 occurrences of:  When
+35.     43 occurrences of:  this
+36.     43 occurrences of:  but
+37.     42 occurrences of:  must
+38.     41 occurrences of:  at
+39.     41 occurrences of:  who
+40.     37 occurrences of:  they
+
+After removing the top 40 items from the heap, there are 3559 pairs left.
+valdes:~/cs221/lab3_L2M> 

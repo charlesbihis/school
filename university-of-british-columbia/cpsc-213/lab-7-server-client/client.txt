@@ -1,0 +1,15 @@
+
+
+// Connected through server on port 5656
+
+Hello
+HELLO
+
+testing
+TESTING
+
+am i connected
+AM I CONNECTED
+
+end OF test
+END OF TEST

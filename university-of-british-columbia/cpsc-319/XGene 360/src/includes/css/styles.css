@@ -1,0 +1,436 @@
+/* PREDEFINED */
+
+html, body { 
+	background-color: #99cc66; 
+	color: #003333; 
+	font-family: "Tahoma", "Geneva", Arial, san-serif; 	 
+	font-size: 13px;
+	text-align: center;
+	width: 100%;
+	margin: 0px; 
+	padding: 0px; 	
+	}
+h1 {
+	color: #ffffff;
+	font-size: 2.0em;
+	font-weight: normal;
+	margin: 0px;
+	padding: 10px 0px;
+	}
+h2 {
+	color: #ffffff;
+  font-size: 1.75em;
+	font-weight: normal;
+	margin: 0px;
+	padding: 8px 0px;
+	}
+h3 {
+	color: #ffffff;
+  font-size: 1.5em;
+	font-weight: normal;
+	margin: 0px;
+	padding: 5px 0px;
+	}
+h4 {
+	color: #ffffff;
+  font-size: 1.25em;
+	font-weight: normal;
+	margin: 0px;
+	padding: 3px 0px;
+	}
+form {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+  }
+input {
+  font-size: 0.85em;
+	margin: 0px;
+  padding: 0px;
+	}
+select {	
+  font-size: 0.9em;
+	width: auto;
+	margin: 1px;
+	padding: 0px;
+	border: 1px solid #336666; 	
+  }
+table {
+  margin: 0px;
+  padding: 0px;
+	border: 0px;
+	border-collapse: collapse;	
+	border-spacing: 0px;
+	clear: both;
+	}
+tbody {
+	margin: 0px;
+	padding: 0px;
+	}
+th {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: bottom;
+	}
+td {
+  margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	}
+p {
+	margin: 8px 0px;
+	padding: 0px;
+	}
+sup {
+	margin: 0px;
+	padding: 0px;
+  }  
+a {
+	color: #996600;
+	text-decoration: underline;
+	cursor: pointer;
+	}
+img {
+	border: 0px;
+	}
+ul, ol {
+	margin: 10px;
+	padding: 0px;
+	list-style-position: inside;
+	}
+li {
+	margin: 0px;
+	padding: 0px;
+	}
+
+/* COMMON CLASSES */
+
+/* gets rid of any border */
+.noborder {
+	border: 0px;
+	}
+/* hides element */
+.invisible { 
+	display: none; 
+	}
+/* block element */
+.visible {
+	display: block;
+	}
+/* centers element */
+.centered {
+	position: relative;
+	text-align: center;
+	margin: 0px auto;
+	clear: both;
+	}
+
+/* LAYOUT AND LAYOUT ELEMENTS */
+
+/* main container */
+#main {
+	background-color: transparent;
+	text-align: left; 
+	width: 100%;
+	}
+/* header container, contains page title */
+#main #header { 
+	background-color: transparent;
+	background-image: url('../images/header.gif');
+	background-repeat: repeat-x;
+	background-position: 0% 100%;
+	width: 100%; 
+	height: 65px;
+	}
+/* plant graphic wrapper in header container */
+#main #header #headergraphic {
+	background-color: transparent; 
+	background-image: url('../images/header_graphic.gif');
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	width: 100%;
+	height: 65px;	
+	}
+#main #header #headergraphic h2 {
+	padding: 25px 0px 0px 25px;
+	}
+#main #header #headergraphic ul {
+	font-size: 0.8em;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	}
+#main #header #headergraphic li {		
+	border-color: #aaffaa;
+  }
+#main #header #headergraphic p {
+	color: #006633;
+	font-size: 0.8em;	
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 45px;
+	right: 15px;
+	}
+/* navi container, navigation bar for page */
+#main #navi {
+	background-color: transparent; 
+	background-image: url('../images/navi.gif');
+	background-repeat: repeat-x;
+	background-position: 0% 0%;
+	color: #336666;
+	width: 100%;
+	height: 35px;
+	}
+#main #navi a {
+	color: #0066cc;
+  }
+#main #navi ul {
+	margin: 0px 0px 0px 25px;
+  }
+/* content container, hold actual page content */
+#main #content { 
+	background-color: transparent;
+	background-image: url('../images/rightbar.gif');
+	background-repeat: repeat-y;
+	background-position: 100% 0%;
+	text-align: left;
+	width: 100%;
+	min-height: 175px;
+	_height: 175px;
+	}
+#main #content #formattedcontent {
+	background-image: url('../images/rightbar_graphic.gif');
+	background-repeat: no-repeat;
+	background-position: 100% 0%;	
+	padding: 25px 60px 35px 25px; 
+	min-height: 175px;	
+	_height: 175px;
+}	
+/* footer container, will always be below content of page */
+#main #footer { 
+	background-color: #99cc66; 
+	background-image: url('../images/footer.gif');
+	background-repeat: repeat-x;
+	background-position: 0% 0%;
+	text-align: left; 
+	width: 100%; 
+	height: 65px;
+	}
+#main #footer a {
+	color: #0066cc;
+  }	
+/* wrapper for bottom right graphic in footer container */
+#main #footer #footergraphic {
+	background-color: transparent; 
+	background-image: url('../images/footer_graphic.gif');
+	background-repeat: no-repeat;
+	background-position: 100% 0%;
+	width: 100%;
+	height: 65px;
+	}	
+#main #footer #footergraphic ul {
+  font-size: 0.8em;
+  margin: 0px 0px 0px 25px;
+  padding-top: 8px;
+  }
+#main #footer #footergraphic li {
+  border-color: #aaffaa;
+  }
+#main #footer #footergraphic p {
+  color: #ffffff;
+  font-size: 0.8em;
+  margin: 0px 0px 0px 25px;
+  padding-top: 10px;
+  }  
+
+/* TABLES */
+
+/* for formatting purposes */
+.format table {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-collapse: collapse;
+	}
+.format table td {
+  vertical-align: bottom;
+	margin: 0px;
+	padding: 8px 0px 0px 0px;
+	border: 0px;
+	border-collapse: collapse;
+	}	
+/* error table class */ 
+#content .errorbox table {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-collapse: collapse;
+	}
+#content .errorbox table td {
+  vertical-align: bottom;
+	margin: 0px;
+	padding: 8px 0px 0px 0px;
+	border: 0px;
+	border-collapse: collapse;
+	}	
+/* listing table class */ 
+#content .listing {
+	background-color: transparent;
+	font-size: 0.9em;
+	text-align: inherit;
+	width: 100%;
+	margin: 10px 0px 20px 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	}
+#content .listing th {
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #333366;
+	text-align: left;
+	text-transform: uppercase;
+	vertical-align: middle;
+	margin: 0px;
+	padding: 4px 2px;
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-color: #006600;
+	border-collapse: collapse;
+	}	
+#content .listing td {
+  vertical-align: middle;
+	margin: 0px;
+	padding: 4px 2px;
+	border-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-color: #009900;
+	border-collapse: collapse;
+	}
+#content .listing .highlight {
+  background-color: #88bb55;
+  }	
+#content .box {
+	background-color: transparent;
+	font-size: 0.8em;
+	text-align: left;
+	width: auto;
+	margin-top: 10px;
+	margin-right: inherit;
+	margin-bottom: 10px;
+	margin-left: inherit;
+	padding: 0px;
+	border-collapse: collapse;
+	}	
+#content .box th {
+	background-color: #99cc99;
+	color: #333366;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;	
+	height: 20px;
+	margin: 0px;
+	padding: 5px;
+	border: 1px solid #669999;
+	border-collapse: collapse;
+	}	
+#content .box td {
+	font-size: 1.1em;
+	margin: 0px;
+	padding: 8px 8px 10px 8px;
+	border: 1px solid #669999;
+	border-collapse: collapse;
+	}	
+#content .box td table td {
+	vertical-align: bottom;
+	margin: 0px;
+	padding: 8px 0px 5px 0px;
+	border: 0px;
+	border-collapse: collapse;	
+	}	
+
+/* TEXT FORMATS */
+
+.errortext {	 
+	font-weight: bold;
+	color: #ff0000;
+}
+/* horizontal menu list */
+.horizontalmenu ul {
+	white-space: nowrap;
+  margin: 0px;
+	padding: 0px;
+	display: inline;
+	list-style-type: none;
+	}
+.horizontalmenu li {
+	line-height: 2.5em;
+	white-space: nowrap;
+	margin: 0px;
+	padding: 0px 0.8em;
+	border-right: 1px solid #ffffff;	
+	display: inline;
+	}
+/* for first list item in menu */	
+.horizontalmenu li.first {
+	border-left: 1px solid #ffffff;
+	}		
+	
+/* FORMS AND INPUTS */
+
+.textinput {	
+	width: 100px;
+	margin: 0px;
+	padding: 1px 2px;
+	border: 1px solid #336666; 
+  }
+.longtextinput {	
+	width: 200px;
+	margin: 0px;
+	padding: 1px 2px;
+	border: 1px solid #336666; 
+  }
+.smallnumberinput {	
+	width: 50px;
+	margin: 0px;
+	padding: 1px 2px;
+	border: 1px solid #336666; 	
+  } 
+.numberinput {	
+	width: 100px;
+	margin: 0px;
+	padding: 1px 2px;
+	border: 1px solid #336666; 	
+  } 
+.buttoninput {
+  background-color: #bbddbb;
+	width: auto;
+	margin: 0px;
+	padding: 2px 3px;
+ 	border: 1px solid #336666; 
+  }
+.textareainput {
+  width: 300px;
+  height: 75px;
+  padding: 1px 2px;
+ 	border: 1px solid #336666; 
+  }
+.fileinput {
+  background-color: transparent;
+  width: 300px;
+	margin: 8px 0px 8px 0px;
+	padding: 0px;
+	border: 1px solid #336666; 	
+  }  

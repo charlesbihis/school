@@ -1,0 +1,864 @@
+/*
+Author: Charles Bihis
+Website: www.charlesbihis.com
+Contact: admin@charlesbihis.com
+
+
+Please read this Source Code License Agreement carefully before using
+the source code.
+
+You agree to indemnify, hold harmless and defend the author from and
+against any loss, damage, claims or lawsuits, including attorney's
+fees that arise or result from your use or distribution of the source
+code.
+	
+THIS SOURCE CODE IS PROVIDED "AS IS" AND "WITH ALL FAULTS", WITHOUT
+ANY TECHNICAL SUPPORT OR ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING,
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. ALSO, THERE IS NO WARRANTY OF
+NON-INFRINGEMENT, TITLE OR QUIET ENJOYMENT. IN NO EVENT SHALL THE AUTHOR
+OR ITS SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOURCE CODE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+
+
+#include <stdio.h>
+#include <gl\glut.h>
+#include "Decepticon.h"
+#include "../Tools/DrawFunctions.h"
+
+
+void Decepticon :: DrawBody()
+{
+	if (anti_aliasing)
+	{
+		glEnable (GL_LINE_SMOOTH);
+		glEnable (GL_BLEND);
+		glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glHint (GL_LINE_SMOOTH_HINT, GL_DONT_CARE);
+		glLineWidth (1.5);
+	}  // if statement
+
+	ChangeColor(0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.8, 1.0);
+
+	glBegin(display_mode);				// bottom left edge
+		CalculateNormal(10, 10, -2.5, -2.5, 0, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-35, 0, 20);
+		glVertex3f(-37.5, 0, 17.5);
+		glVertex3f(-45, 10, 17.5);
+		glVertex3f(-42.5, 10, 20);
+	glEnd();
+
+	glBegin(display_mode);				// bottom right edge
+		CalculateNormal(2.5, 0, -2.5, 5, 10, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(35, 0, 20);
+		glVertex3f(37.5, 0, 17.5);
+		glVertex3f(45, 10, 17.5);
+		glVertex3f(42.5, 10, 20);
+	glEnd(); 
+
+	glBegin(display_mode);				// left edge
+		CalculateNormal(-2.5, 40, -2.5, -2.5, 0, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-42.5, 10, 20);
+		glVertex3f(-45, 10, 17.5);
+		glVertex3f(-45, 50, 17.5);
+		glVertex3f(-42.5, 47.5, 20);
+	glEnd();
+
+	glBegin(display_mode);				// right edge
+		CalculateNormal(2.5, 0, -2.5, 2.5, 40, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(42.5, 10, 20);
+		glVertex3f(45, 10, 17.5);
+		glVertex3f(45, 50, 17.5);
+		glVertex3f(42.5, 47.5, 20);
+	glEnd();
+
+	glBegin(display_mode);				// top left edge
+		CalculateNormal(30, 2.5, -2.5, 27.5, 2.5, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-42.5, 47.5, 20);
+		glVertex3f(-45, 50, 17.5);
+		glVertex3f(-15, 50, 17.5);
+		glVertex3f(-15, 47.5, 20);
+	glEnd();
+
+	glBegin(display_mode);				// top right edge
+		CalculateNormal(2.5, 2.5, -2.5, -27.5, 2.5, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(42.5, 47.5, 20);
+		glVertex3f(45, 50, 17.5);
+		glVertex3f(15, 50, 17.5);
+		glVertex3f(15, 47.5, 20);
+	glEnd();
+
+	glBegin(display_mode);				// left inner wall
+		glNormal3f(0, 0, 1);
+		glVertex3f(-15, 50, 15);
+		glVertex3f(-15, 50, 17.5);
+		glVertex3f(-15, 47.5, 20);
+		glVertex3f(-15, 45, 20);
+		glVertex3f(-15, 45, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// right inner wall
+		glNormal3f(0, 0, 1);
+		glVertex3f(15, 50, 15);
+		glVertex3f(15, 50, 17.5);
+		glVertex3f(15, 47.5, 20);
+		glVertex3f(15, 45, 20);
+		glVertex3f(15, 45, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// middle flat wall
+		glNormal3f(0, 1, 0);
+		glVertex3f(-15, 45, 17.5);
+		glVertex3f(-15, 45, 20);
+		glVertex3f(15, 45, 20);
+		glVertex3f(15, 45, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// middle slanted edge
+		CalculateNormal(30, 5, -2.5, 0, 5, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-15, 45, 17.5);
+		glVertex3f(-15, 50, 15);
+		glVertex3f(15, 50, 15);
+		glVertex3f(15, 45, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// bottom edge
+		CalculateNormal(-2.5, 0, -2.5, 72.5, 0, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-35, 0, 20);
+		glVertex3f(-37.5, 0, 17.5);
+		glVertex3f(37.5, 0, 17.5);
+		glVertex3f(35, 0, 20);
+	glEnd();
+
+	glBegin(display_mode);				// back face
+		glNormal3f(0, 0, -1);
+		glVertex3f(-37.5, 0, -17.5);
+		glVertex3f(-45, 10, -17.5);
+		glVertex3f(-45, 50, -17.5);
+		glVertex3f(45, 50, -17.5);
+		glVertex3f(45, 10, -17.5);
+		glVertex3f(37.5, 0, -17.5);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled left face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-35, 0, 20);
+		glVertex3f(-42.5, 10, 20);
+		glVertex3f(-42.5, 47.5, 20);
+		glVertex3f(-30, 40, 20);
+		glVertex3f(-30, 15, 20);
+		glVertex3f(-27.5, 12.5, 20);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled left edge
+		glNormal3f(1, 0, 0);
+		glVertex3f(-30, 40, 20);
+		glVertex3f(-30, 15, 20);
+		glVertex3f(-30, 15, 17.5);
+		glVertex3f(-30, 40, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled right face
+		glNormal3f(0, 0, 1);
+		glVertex3f(35, 0, 20);
+		glVertex3f(42.5, 10, 20);
+		glVertex3f(42.5, 47.5, 20);
+		glVertex3f(30, 40, 20);
+		glVertex3f(30, 15, 20);
+		glVertex3f(27.5, 12.5, 20);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled right edge
+		glNormal3f(-1, 0, 0);
+		glVertex3f(30, 40, 20);
+		glVertex3f(30, 15, 20);
+		glVertex3f(30, 15, 17.5);
+		glVertex3f(30, 40, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled bottom face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-35, 0, 20);
+		glVertex3f(-27.5, 12.5, 20);
+		glVertex3f(27.5, 12.5, 20);
+		glVertex3f(35, 0, 20);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled bottom edge
+		glNormal3f(0, 1, 0);
+		glVertex3f(-27.5, 12.5, 20);
+		glVertex3f(27.5, 12.5, 20);
+		glVertex3f(27.5, 12.5, 17.5);
+		glVertex3f(-27.5, 12.5, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled bottom left edge
+		CalculateNormal(-2.5, 2.5, -2.5, -2.5, 2.5, 0);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-27.5, 12.5, 20);
+		glVertex3f(-30, 15, 20);
+		glVertex3f(-30, 15, 17.5);
+		glVertex3f(-27.5, 12.5, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled bottom right edge
+		CalculateNormal(2.5, 2.5, 0, 2.5, 2.5, -2.5);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(27.5, 12.5, 20);
+		glVertex3f(30, 15, 20);
+		glVertex3f(30, 15, 17.5);
+		glVertex3f(27.5, 12.5, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled top left face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-30, 40, 20);
+		glVertex3f(-42.5, 47.5, 20);
+		glVertex3f(-15, 47.5, 20);
+		glVertex3f(-15, 40, 20);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled top right face
+		glNormal3f(0, 0, 1);
+		glVertex3f(30, 40, 20);
+		glVertex3f(42.5, 47.5, 20);
+		glVertex3f(15, 47.5, 20);
+		glVertex3f(15, 40, 20);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled top middle face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-15, 45, 20);
+		glVertex3f(-15, 40, 20);
+		glVertex3f(15, 40, 20);
+		glVertex3f(15, 45, 20);
+	glEnd();
+
+	glBegin(display_mode);				// front bevelled top edge
+		glNormal3f(0, 1, 0);
+		glVertex3f(-30, 40, 20);
+		glVertex3f(30, 40, 20);
+		glVertex3f(30, 40, 17.5);
+		glVertex3f(-30, 40, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// bottom face
+		glNormal3f(0, -1, 0);
+		glVertex3f(-37.5, 0, 17.5);
+		glVertex3f(-37.5, 0, -17.5);
+		glVertex3f(37.5, 0, -17.5);
+		glVertex3f(37.5, 0, 17.5);
+	glEnd();
+
+	glBegin(display_mode);				// bottom left face
+		CalculateNormal(-7.5, 10, 35, -7.5, 10, 0);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-37.5, 0, 17.5);
+		glVertex3f(-45, 10, 17.5);
+		glVertex3f(-45, 10, -17.5);
+		glVertex3f(-37.5, 0, -17.5);
+	glEnd();
+
+	glBegin(display_mode);				// bottom right face
+		CalculateNormal(7.5, 10, 0, 7.5, 10, 35);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(37.5, 0, 17.5);
+		glVertex3f(45, 10, 17.5);
+		glVertex3f(45, 10, -17.5);
+		glVertex3f(37.5, 0, -17.5);
+	glEnd();
+
+	glBegin(display_mode);				// left face
+		glNormal3f(-1, 0, 0);
+		glVertex3f(-45, 10, 17.5);
+		glVertex3f(-45, 50, 17.5);
+		glVertex3f(-45, 50, -17.5);
+		glVertex3f(-45, 10, -17.5);
+	glEnd();
+
+	glBegin(display_mode);				// right face
+		glNormal3f(1, 0, 0);
+		glVertex3f(45, 10, 17.5);
+		glVertex3f(45, 50, 17.5);
+		glVertex3f(45, 50, -17.5);
+		glVertex3f(45, 10, -17.5);
+	glEnd();
+
+	glBegin(display_mode);				// top face
+		glNormal3f(0, 1, 0);
+		glVertex3f(-45, 50, 17.5);
+		glVertex3f(-15, 50, 17.5);
+		glVertex3f(-15, 50, 15);
+		glVertex3f(15, 50, 15);
+		glVertex3f(15, 50, 17.5);
+		glVertex3f(45, 50, 17.5);
+		glVertex3f(45, 50, -17.5);
+		glVertex3f(-45, 50, -17.5);
+	glEnd();
+
+	ChangeColor(1.0, 1.0, 0.0, 1.0, 0.8, 0.8, 0.0, 1.0);
+
+	glBegin(display_mode);				// left upper stripe face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-42.5, 35, 21);
+		glVertex3f(-42.5, 31, 21);
+		glVertex3f(-32.5, 31, 21);
+		glVertex3f(-32.5, 35, 21);
+	glEnd();
+
+	glBegin(display_mode);				// right upper stripe face
+		glNormal3f(0, 0, 1);
+		glVertex3f(42.5, 35, 21);
+		glVertex3f(42.5, 31, 21);
+		glVertex3f(32.5, 31, 21);
+		glVertex3f(32.5, 35, 21);
+	glEnd();
+
+	glBegin(display_mode);				// left lower stripe face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-42.5, 29, 21);
+		glVertex3f(-42.5, 25, 21);
+		glVertex3f(-32.5, 25, 21);
+		glVertex3f(-32.5, 29, 21);
+	glEnd();
+
+	glBegin(display_mode);				// right lower stripe face
+		glNormal3f(0, 0, 1);
+		glVertex3f(42.5, 29, 21);
+		glVertex3f(42.5, 25, 21);
+		glVertex3f(32.5, 25, 21);
+		glVertex3f(32.5, 29, 21);
+	glEnd();
+
+	glBegin(display_mode);				// left upper stripe left rise
+		glNormal3f(-1, 0, 0);
+		glVertex3f(-42.5, 35, 21);
+		glVertex3f(-42.5, 31, 21);
+		glVertex3f(-42.5, 31, 20);
+		glVertex3f(-42.5, 35, 20);
+	glEnd();
+
+	glBegin(display_mode);				// right upper stripe right rise
+		glNormal3f(1, 0, 0);
+		glVertex3f(42.5, 35, 21);
+		glVertex3f(42.5, 31, 21);
+		glVertex3f(42.5, 31, 20);
+		glVertex3f(42.5, 35, 20);
+	glEnd();
+
+	glBegin(display_mode);				// left upper stripe upper rise
+		glNormal3f(0, 1, 0);
+		glVertex3f(-42.5, 35, 21);
+		glVertex3f(-32.5, 35, 21);
+		glVertex3f(-32.5, 35, 20);
+		glVertex3f(-42.5, 35, 20);
+	glEnd();
+
+	glBegin(display_mode);				// right upper stripe upper rise
+		glNormal3f(0, 1, 0);
+		glVertex3f(42.5, 35, 21);
+		glVertex3f(32.5, 35, 21);
+		glVertex3f(32.5, 35, 20);
+		glVertex3f(42.5, 35, 20);
+	glEnd();
+
+	glBegin(display_mode);				// left upper stripe right rise
+		glNormal3f(1, 0, 0);
+		glVertex3f(-32.5, 35, 21);
+		glVertex3f(-32.5, 31, 21);
+		glVertex3f(-32.5, 31, 20);
+		glVertex3f(-32.5, 35, 20);
+	glEnd();
+
+	glBegin(display_mode);				// right upper stripe left rise
+		glNormal3f(-1, 0, 0);
+		glVertex3f(32.5, 35, 21);
+		glVertex3f(32.5, 31, 21);
+		glVertex3f(32.5, 31, 20);
+		glVertex3f(32.5, 35, 20);
+	glEnd();
+
+	glBegin(display_mode);				// left upper stripe lower rise
+		glNormal3f(0, -1, 0);
+		glVertex3f(-42.5, 31, 21);
+		glVertex3f(-32.5, 31, 21);
+		glVertex3f(-32.5, 31, 20);
+		glVertex3f(-42.5, 31, 20);
+	glEnd();
+
+	glBegin(display_mode);				// right upper stripe lower rise
+		glNormal3f(0, -1, 0);
+		glVertex3f(42.5, 31, 21);
+		glVertex3f(32.5, 31, 21);
+		glVertex3f(32.5, 31, 20);
+		glVertex3f(42.5, 31, 20);
+	glEnd();
+
+	glBegin(display_mode);				// left lower stripe left rise
+		glNormal3f(-1, 0, 0);
+		glVertex3f(-42.5, 29, 21);
+		glVertex3f(-42.5, 25, 21);
+		glVertex3f(-42.5, 25, 20);
+		glVertex3f(-42.5, 29, 20);
+	glEnd();
+
+	glBegin(display_mode);				// right lower stripe right rise
+		glNormal3f(1, 0, 0);
+		glVertex3f(42.5, 29, 21);
+		glVertex3f(42.5, 25, 21);
+		glVertex3f(42.5, 25, 20);
+		glVertex3f(42.5, 29, 20);
+	glEnd();
+
+	glBegin(display_mode);				// left lower stripe upper rise
+		glNormal3f(0, 1, 0);
+		glVertex3f(-42.5, 29, 21);
+		glVertex3f(-32.5, 29, 21);
+		glVertex3f(-32.5, 29, 20);
+		glVertex3f(-42.5, 29, 20);
+	glEnd();
+
+	glBegin(display_mode);				// right lower stripe upper rise
+		glNormal3f(0, 1, 0);
+		glVertex3f(42.5, 29, 21);
+		glVertex3f(32.5, 29, 21);
+		glVertex3f(32.5, 29, 20);
+		glVertex3f(42.5, 29, 20);
+	glEnd();
+
+	glBegin(display_mode);				// left lower stripe right rise
+		glNormal3f(1, 0, 0);
+		glVertex3f(-32.5, 29, 21);
+		glVertex3f(-32.5, 25, 21);
+		glVertex3f(-32.5, 25, 20);
+		glVertex3f(-32.5, 29, 21);
+	glEnd();
+
+	glBegin(display_mode);				// right lower stripe left rise
+		glNormal3f(-1, 0, 0);
+		glVertex3f(32.5, 29, 21);
+		glVertex3f(32.5, 25, 21);
+		glVertex3f(32.5, 25, 20);
+		glVertex3f(32.5, 29, 21);
+	glEnd();
+
+	glBegin(display_mode);				// left lower stripe lower rise
+		glNormal3f(0, -1, 0);
+		glVertex3f(-42.5, 25, 21);
+		glVertex3f(-32.5, 25, 21);
+		glVertex3f(-32.5, 25, 20);
+		glVertex3f(-42.5, 25, 20);
+	glEnd();
+
+	glBegin(display_mode);				// right lower stripe lower rise
+		glNormal3f(0, 0, -1);
+		glVertex3f(42.5, 25, 21);
+		glVertex3f(32.5, 25, 21);
+		glVertex3f(32.5, 25, 20);
+		glVertex3f(42.5, 25, 20);
+	glEnd();
+
+	ChangeColor(0.0, 0.0, 0.8, 1.0, 0.0, 0.0, 0.5, 1.0);
+
+	glBegin(display_mode);				// back brace back left face
+		glNormal3f(0, 0, -1);
+		glVertex3f(-45, 20, -15);
+		glVertex3f(-50, 25, -15);
+		glVertex3f(-50, 50, -15);
+		glVertex3f(-45, 50, -15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace back right face
+		glNormal3f(0, 0, -1);
+		glVertex3f(45, 20, -15);
+		glVertex3f(50, 25, -15);
+		glVertex3f(50, 50, -15);
+		glVertex3f(45, 50, -15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace back top face
+		glNormal3f(0, 0, -1);
+		glVertex3f(-50, 50, -15);
+		glVertex3f(-45, 55, -15);
+		glVertex3f(45, 55, -15);
+		glVertex3f(50, 50, -15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace front left face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-45, 20, -5);
+		glVertex3f(-50, 25, -5);
+		glVertex3f(-50, 50, -5);
+		glVertex3f(-45, 50, -5);
+	glEnd();
+
+	glBegin(display_mode);				// back brace front right face
+		glNormal3f(0, 0, 1);
+		glVertex3f(45, 20, -5);
+		glVertex3f(50, 25, -5);
+		glVertex3f(50, 50, -5);
+		glVertex3f(45, 50, -5);
+	glEnd();
+
+	glBegin(display_mode);				// back brace front top face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-50, 50, -5);
+		glVertex3f(-45, 55, -5);
+		glVertex3f(45, 55, -5);
+		glVertex3f(50, 50, -5);
+	glEnd();
+
+	glBegin(display_mode);				// front brace back left face
+		glNormal3f(0, 0, -1);
+		glVertex3f(-45, 20, 5);
+		glVertex3f(-50, 25, 5);
+		glVertex3f(-50, 50, 5);
+		glVertex3f(-45, 50, 5);
+	glEnd();
+
+	glBegin(display_mode);				// front brace back right face
+		glNormal3f(0, 0, -1);
+		glVertex3f(45, 20, 5);
+		glVertex3f(50, 25, 5);
+		glVertex3f(50, 50, 5);
+		glVertex3f(45, 50, 5);
+	glEnd();
+
+	glBegin(display_mode);				// front brace back top face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-50, 50, 15);
+		glVertex3f(-45, 55, 15);
+		glVertex3f(45, 55, 15);
+		glVertex3f(50, 50, 15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace back left face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-45, 20, 15);
+		glVertex3f(-50, 25, 15);
+		glVertex3f(-50, 50, 15);
+		glVertex3f(-45, 50, 15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace back right face
+		glNormal3f(0, 0, 1);
+		glVertex3f(45, 20, 15);
+		glVertex3f(50, 25, 15);
+		glVertex3f(50, 50, 15);
+		glVertex3f(45, 50, 15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace back top face
+		glNormal3f(0, 0, 1);
+		glVertex3f(-50, 50, 15);
+		glVertex3f(-45, 55, 15);
+		glVertex3f(45, 55, 15);
+		glVertex3f(50, 50, 15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace lower left edge
+		CalculateNormal(-5, 5, 0, -5, 5, -10);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-45, 20, -5);
+		glVertex3f(-50, 25, -5);
+		glVertex3f(-50, 25, -15);
+		glVertex3f(-45, 20, -15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace lower left edge
+		CalculateNormal(-5, 5, 10, -5, 5, 0);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-45, 20, 5);
+		glVertex3f(-50, 25, 5);
+		glVertex3f(-50, 25, 15);
+		glVertex3f(-45, 20, 15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace lower right edge
+		CalculateNormal(5, 5, -10, 5, 5, 0);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(45, 20, -5);
+		glVertex3f(50, 25, -5);
+		glVertex3f(50, 25, -15);
+		glVertex3f(45, 20, -15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace lower right edge
+		CalculateNormal(5, 5, 0, 5, 5, 10);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(45, 20, 5);
+		glVertex3f(50, 25, 5);
+		glVertex3f(50, 25, 15);
+		glVertex3f(45, 20, 15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace left edge
+		glNormal3f(-1, 0, 0);
+		glVertex3f(-50, 25, -5);
+		glVertex3f(-50, 50, -5);
+		glVertex3f(-50, 50, -15);
+		glVertex3f(-50, 25, -15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace left edge
+		glNormal3f(-1, 0, 0);
+		glVertex3f(-50, 25, 5);
+		glVertex3f(-50, 50, 5);
+		glVertex3f(-50, 50, 15);
+		glVertex3f(-50, 25, 15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace right edge
+		glNormal3f(1, 0, 0);
+		glVertex3f(50, 25, -5);
+		glVertex3f(50, 50, -5);
+		glVertex3f(50, 50, -15);
+		glVertex3f(50, 25, -15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace right edge
+		glNormal3f(1, 0, 0);
+		glVertex3f(50, 25, 5);
+		glVertex3f(50, 50, 5);
+		glVertex3f(50, 50, 15);
+		glVertex3f(50, 25, 15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace top left edge
+		CalculateNormal(5, 5, 0, 5, 5, -10);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-50, 50, -5);
+		glVertex3f(-45, 55, -5);
+		glVertex3f(-45, 55, -15);
+		glVertex3f(-50, 50, -15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace top right edge
+		CalculateNormal(-5, 5, -10, -5, 5, 0);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(50, 50, -5);
+		glVertex3f(45, 55, -5);
+		glVertex3f(45, 55, -15);
+		glVertex3f(50, 50, -15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace top left edge
+		CalculateNormal(5, 5, 10, 5, 5, 0);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(-50, 50, 5);
+		glVertex3f(-45, 55, 5);
+		glVertex3f(-45, 55, 15);
+		glVertex3f(-50, 50, 15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace top right edge
+		CalculateNormal(5, 5, 0, -5, 5, 10);
+		glNormal3f(normal_vector[0], normal_vector[1], normal_vector[2]);
+		glVertex3f(50, 50, 5);
+		glVertex3f(45, 55, 5);
+		glVertex3f(45, 55, 15);
+		glVertex3f(50, 50, 15);
+	glEnd();
+
+	glBegin(display_mode);				// back brace top edge
+		glNormal3f(0, 1, 0);
+		glVertex3f(-45, 55, -5);
+		glVertex3f(45, 55, -5);
+		glVertex3f(45, 55, -15);
+		glVertex3f(-45, 55, -15);
+	glEnd();
+
+	glBegin(display_mode);				// front brace top edge
+		glNormal3f(0, 1, 0);
+		glVertex3f(-45, 55, 5);
+		glVertex3f(45, 55, 5);
+		glVertex3f(45, 55, 15);
+		glVertex3f(-45, 55, 15);
+	glEnd();
+
+	ChangeColor(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
+
+	glBegin(display_mode);				// gun-mount front face
+		glNormal3f(0, 0, 1);
+		glVertex3f(22, 55, 12.5);
+		glVertex3f(22, 60, 12.5);
+		glVertex3f(32, 60, 12.5);
+		glVertex3f(32, 55, 12.5);
+	glEnd();
+
+	glBegin(display_mode);				// gun-mount back face
+		glNormal3f(0, 0, -1);
+		glVertex3f(22, 55, 7.5);
+		glVertex3f(22, 60, 7.5);
+		glVertex3f(32, 60, 7.5);
+		glVertex3f(32, 55, 7.5);
+	glEnd();
+
+	glBegin(display_mode);				// gun-mount left face
+		glNormal3f(-1, 0, 0);
+		glVertex3f(22, 55, 12.5);
+		glVertex3f(22, 60, 12.5);
+		glVertex3f(22, 60, 7.5);
+		glVertex3f(22, 55, 7.5);
+	glEnd();
+
+	glBegin(display_mode);				// gun-mount right face
+		glNormal3f(1, 0, 0);
+		glVertex3f(32, 55, 12.5);
+		glVertex3f(32, 60, 12.5);
+		glVertex3f(32, 60, 7.5);
+		glVertex3f(32, 55, 7.5);
+	glEnd();
+
+	glBegin(display_mode);				// gun-mount top face
+		glNormal3f(0, 1, 0);
+		glVertex3f(22, 60, 12.5);
+		glVertex3f(22, 60, 7.5);
+		glVertex3f(32, 60, 7.5);
+		glVertex3f(32, 60, 12.5);
+	glEnd();
+
+	ChangeColor(0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.8, 1.0);
+
+	if (display_mode == GL_LINE_LOOP)
+	{
+		glPushMatrix();
+			glTranslatef(-30, 67.5, -32.5);
+			glRotatef(90, 1, 0, 0);
+			TaperedWireCylinder(0, 12.5, 0, 20);
+			TaperedWireCylinder(15, 12.5, 12.5, 20);
+			glTranslatef(0, 15, 0);
+			TaperedWireCylinder(0, 12.5, 9.5, 20);
+			TaperedWireCylinder(3, 9.5, 9.5, 20);
+			glTranslatef(0, 3, 0);
+			TaperedWireCylinder(0, 9.5, 12.5, 20);
+			TaperedWireCylinder(30, 12.5, 12.5, 20);
+			glTranslatef(0, 30, 0);
+			TaperedWireCylinder(0, 12.5, 9.5, 20);
+			TaperedWireCylinder(2, 9.5, 9.5, 20);
+			glTranslatef(0, 2, 0);
+			TaperedWireCylinder(0, 9.5, 12.5, 20);
+			TaperedWireCylinder(4, 12.5, 12.5, 20);
+			glTranslatef(0, 4, 0);
+			TaperedWireCylinder(0, 12.5, 9.5, 20);
+			TaperedWireCylinder(5, 9.5, 9.5, 20);
+			glTranslatef(0, 5, 0);
+			TaperedWireCylinder(0, 9.5, 12.5, 20);
+			TaperedWireCylinder(4, 12.5, 12.5, 20);
+			glTranslatef(0, 4, 0);
+			TaperedWireCylinder(0, 12.5, 9.5, 20);
+			TaperedWireCylinder(2, 9.5, 9.5, 20);
+			glTranslatef(0, 2, 0);
+			TaperedWireCylinder(0, 9.5, 12.5, 20);
+			glPushMatrix();
+				glTranslatef(0, 5, 0);
+				ChangeColor(1.0, 0.0, 0.0, 1.0, 0.8, 0.0, 0.0, 1.0);
+				TaperedWireCylinder(5, 12.5, 12.5, 20);
+				ChangeColor(0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0);
+			glPopMatrix();
+			TaperedWireCylinder(15, 12.5, 12.5, 20);
+			glTranslatef(0, 15, 0);
+			TaperedWireCylinder(0, 12.5, 9.5, 20);
+			glTranslatef(0, -40, 0);
+			ChangeColor(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 1.0);
+			TaperedWireCylinder(0, 9.5, 0, 20);
+			ChangeColor(0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.8, 1.0);
+			TaperedWireCylinder(40, 9.5, 9.5, 20);
+		glPopMatrix();
+	}  // if statement
+	else if (display_mode == GL_POLYGON)
+	{
+		glPushMatrix();
+			glTranslatef(-30, 67.5, -32.5);
+			glRotatef(90, 1, 0, 0);
+			TaperedCylinder(0, 12.5, 0, 20);
+			TaperedCylinder(15, 12.5, 12.5, 20);
+			glTranslatef(0, 15, 0);
+			TaperedCylinder(0, 12.5, 9.5, 20);
+			TaperedCylinder(3, 9.5, 9.5, 20);
+			glTranslatef(0, 3, 0);
+			TaperedCylinder(0, 9.5, 12.5, 20);
+			TaperedCylinder(30, 12.5, 12.5, 20);
+			glTranslatef(0, 30, 0);
+			TaperedCylinder(0, 12.5, 9.5, 20);
+			TaperedCylinder(2, 9.5, 9.5, 20);
+			glTranslatef(0, 2, 0);
+			TaperedCylinder(0, 9.5, 12.5, 20);
+			TaperedCylinder(4, 12.5, 12.5, 20);
+			glTranslatef(0, 4, 0);
+			TaperedCylinder(0, 12.5, 9.5, 20);
+			TaperedCylinder(5, 9.5, 9.5, 20);
+			glTranslatef(0, 5, 0);
+			TaperedCylinder(0, 9.5, 12.5, 20);
+			TaperedCylinder(4, 12.5, 12.5, 20);
+			glTranslatef(0, 4, 0);
+			TaperedCylinder(0, 12.5, 9.5, 20);
+			TaperedCylinder(2, 9.5, 9.5, 20);
+			glTranslatef(0, 2, 0);
+			TaperedCylinder(0, 9.5, 12.5, 20);
+			glPushMatrix();
+				glTranslatef(0, 5, 0);
+				ChangeColor(1.0, 0.0, 0.0, 1.0, 0.8, 0.0, 0.0, 1.0);
+				TaperedCylinder(5, 12.6, 12.6, 20);
+				ChangeColor(0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0);
+			glPopMatrix();
+			TaperedCylinder(15, 12.5, 12.5, 20);
+			glTranslatef(0, 15, 0);
+			TaperedCylinder(0, 12.5, 9.5, 20);
+			glTranslatef(0, -40, 0);
+			ChangeColor(0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.5, 1.0);
+			TaperedCylinder(0, 9.5, 0, 20);
+			ChangeColor(0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.8, 1.0);
+			TaperedCylinder(40, 9.5, 9.5, 20);
+		glPopMatrix();
+	}  // else statement
+}  // DrawBody
+
+
+void Decepticon :: SetWindowAngle(int new_value)
+{
+	window_angle = new_value;
+}  // SetWindowAngle
+
+
+void Decepticon :: OpenWindow()
+{
+	if (window_angle < 90)
+	{
+		window_angle ++;
+		printf("Opening window.\n");
+	}  // if statement
+	else
+	{
+		printf("Cannot open window further.\n");
+	}  // else statement
+}  // OpenWindow
+
+
+void Decepticon :: CloseWindow()
+{
+	if (window_angle > 0)
+	{
+		window_angle--;
+		printf("Closing window.\n");
+	}  // if statement
+	else
+	{
+		printf("Cannot close window further.\n");
+	}  // else statement
+}  // CloseWindow

@@ -1,0 +1,15 @@
+# makefile 1 
+# cpsc 213 lab 2 - xdr
+# Concepts introduced: Rules and dependencies
+
+xdr: xdr.o endian.o
+	gcc -g  -o xdr xdr.o endian.o
+
+endian.o: endian.h endian.c
+	gcc -g -c endian.c
+
+xdr.o: xdr.c endian.h
+	gcc -g -c xdr.c
+
+
+# End of makefile makeRules

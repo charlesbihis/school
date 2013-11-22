@@ -1,0 +1,241 @@
+"General"
+{
+"ProjectIdGuid" = "{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}"
+"ProjectVersion" = "1.3.0.2064"
+}
+"Configurations"
+{
+    "Local|Php 4"
+    {
+    "DebugMode" = "Builtin"
+    "DebugType" = "Mixed"
+    "StartPage" = "Page.php"
+    "RootUrl" = ""
+    "BrowserType" = "IE"
+    "PhpIniFilePath" = ""
+    "ApachePortNumber" = "15382"
+    "ApacheTemplateFileName" = "D:\\XGene360\\src\\httpd-default.conf"
+    "LocalDeploymentDir" = ""
+    "FtpServer" = ""
+    "FtpUserName" = ""
+    "FtpPassword" = ""
+    "FtpDirectory" = ""
+    "SftpServer" = ""
+    "SftpUserName" = ""
+    "SftpPassword" = ""
+    "SftpDirectory" = ""
+    "IncludeDirs" = ""
+    }
+    "Local|Php 5"
+    {
+    "DebugMode" = "Builtin"
+    "DebugType" = "Mixed"
+    "StartPage" = ""
+    "RootUrl" = ""
+    "BrowserType" = "IE"
+    "PhpIniFilePath" = ""
+    "ApacheTemplateFileName" = ""
+    "LocalDeploymentDir" = ""
+    "FtpServer" = ""
+    "FtpUserName" = ""
+    "FtpPassword" = ""
+    "FtpDirectory" = ""
+    "SftpServer" = ""
+    "SftpUserName" = ""
+    "SftpPassword" = ""
+    "SftpDirectory" = ""
+    "IncludeDirs" = ""
+    }
+    "Remote|Php 4"
+    {
+    "DebugMode" = "Builtin"
+    "DebugType" = "Mixed"
+    "StartPage" = ""
+    "RootUrl" = ""
+    "BrowserType" = "IE"
+    "PhpIniFilePath" = ""
+    "ApacheTemplateFileName" = ""
+    "LocalDeploymentDir" = ""
+    "FtpServer" = ""
+    "FtpUserName" = ""
+    "FtpPassword" = ""
+    "FtpDirectory" = ""
+    "SftpServer" = ""
+    "SftpUserName" = ""
+    "SftpPassword" = ""
+    "SftpDirectory" = ""
+    "IncludeDirs" = ""
+    }
+    "Remote|Php 5"
+    {
+    "DebugMode" = "Builtin"
+    "DebugType" = "Mixed"
+    "StartPage" = ""
+    "RootUrl" = ""
+    "BrowserType" = "IE"
+    "PhpIniFilePath" = ""
+    "ApacheTemplateFileName" = ""
+    "LocalDeploymentDir" = ""
+    "FtpServer" = ""
+    "FtpUserName" = ""
+    "FtpPassword" = ""
+    "FtpDirectory" = ""
+    "SftpServer" = ""
+    "SftpUserName" = ""
+    "SftpPassword" = ""
+    "SftpDirectory" = ""
+    "IncludeDirs" = ""
+    }
+}
+"Files"
+{
+    "includes\\classes\\db\\db.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\cookiehandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\pagehandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\handler\\userhandler.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\log\\log.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\renderer\\histogramrenderer.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\simulator\\gene.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\classes\\simulator\\normalgenerator.class.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\css\\styles.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\managecourses.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\manageproblems.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\manageprofessors.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\managestudents.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\manageta.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\viewcourse.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\viewproblem.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\viewprofessor.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\viewstudent.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\viewstudentsolution.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\admin\\viewta.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\student\\listofgenerations.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\student\\submitproblem.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\student\\viewproblems.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\student\\viewsolution.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\changepassword.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\error.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\login.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\pages\\logout.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\common.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\scripts\\login.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\config.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\global.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "includes\\navi.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "page.php"
+    {
+    "ProjRelPath" = "T"
+    }
+}
+"ProjStartupServices"
+{
+}
+"Globals"
+{
+}
+"References"
+{
+}

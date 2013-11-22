@@ -1,0 +1,15 @@
+.plantshelf { border: 0px solid #ffffff; border-collapse: collapse; visibility: hidden; }
+
+.plantshelf .p  { width: 30px; height: 29px; margin: 0px; padding: 0px; position: relative; float: left; }
+
+.plantshelf .pot { width: 26px; height: 15px; margin: 0px; padding: 0px; position: absolute; left: 2px; bottom: 0px; }
+.plantshelf .ll  { width: 13px; height: 14px; margin: 0px; padding: 0px; position: absolute; left: 2px; top: 0px; }
+.plantshelf .lr  { width: 13px; height: 14px; margin: 0px; padding: 0px; position: absolute; left: 15px; top: 0px; }
+
+.histogram .traitA { background-color: #ff0000; border: 1px solid #000000; position: absolute; bottom: 0px; }
+.histogram .traitB { background-color: #00ff00; border: 1px solid #000000; position: absolute; bottom: 0px; }
+.histogram .yAxis { position: absolute; left: 0px; top: 0px; border-right: 1px solid #000000; }
+.histogram .yAxisLabel { font-size: 10px; overflow: hidden; position: absolute; left: 0px; }
+.histogram .xAxis { position: absolute; left: 0px; border-top: 1px solid #000000; }
+.histogram .xAxisLabel { font-size: 10px; text-align: center; overflow: hidden; position: absolute; }
+.histogram .traitLabel { position: absolute; left: 0px; bottom: 0px; text-align: center; }

@@ -1,0 +1,29 @@
+# makefile 2 - makeVars
+# cpsc 213 lab 2 - decoder
+# Concepts introduced: Variables in a makefile, make clean
+
+CC=	gcc
+CFLAGS=	-g -c
+PROG=   decoder
+SRCS=   decoder_driver.c decoder.c dsupport.c endian.c
+OBJS=   decoder_driver.o decoder.o dsupport.o endian.o
+
+$(PROG): $(OBJS)
+	$(CC) $(CFLAGS) $(PROG) $(OBJS)
+
+decoder_driver.o: decoder_driver.c
+	$(CC) $(CFLAGS) decoder_driver.c
+
+decoder.o: decoder.c decoder.h greetings.h
+	$(CC) $(CFLAGS) decoder.c
+
+dsupport.o: dsupport.c dsupport.h endian.h
+	$(CC) $(CFLAGS) dsupport.c
+
+endian.o: endian.c endian.h 
+	$(CC) $(CFLAGS) endian.c 
+
+clean:
+	rm -f $(OBJS)
+# End of makefile makeVars
+

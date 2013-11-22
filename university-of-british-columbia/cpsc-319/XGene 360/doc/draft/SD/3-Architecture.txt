@@ -1,0 +1,43 @@
+3 Architecture
+--------------
+
+3.1 Overview
+------------
+
+3-Tier Architecture
+-------------------
+
+XGene360 will be based on the 3-Tier architecture model.  This architecture consists of three main components:
+
+1. The client-tier, which is the web browser on the client machine.
+2. Application server-tier, which is the PHP application logic layer.
+3. Data-tier, which is the relational database used to store persistent data.
+
+Boundaries between tiers are logical tiers.  One or more tiers may, and can, reside on the same machine.
+
+Client-tier
+-----------
+
+The client-tier consists of the internet connected web browser used to access XGene360.  The Client tier is responsible for data presentation, and creating event driven flow control to the application-tier.
+
+Application-tier
+----------------
+
+All PHP files are a part of the application-tier and are available to the client-tier upon user login and authentication.  All application logic and processing are stored and executed as part of the application-tier.
+
+Data-tier
+---------
+
+The data-tier is responsible for persistent storage.  A mySQL relational database will be used for this purpose.
+
+3.2 Rationale
+-------------
+
+The 3-tier architecture provides an optimal solution to our software engineering problem for the following reasons:
+
+- The need for allowing access from multiple clients sets client/server as an initial possible architecture.
+- The need for web browser access and an interpreted language indicates a browser client-tier and an application-tier residing with the PHP web server scripting language.
+- Persistent storage is required and as a result, efficient, secure, and implementation unspecific storage indicates a mySQL DBMS will pair well with the application-tier.
+- Resultantly, these three points and their respective requirements indicate that the 3-tier architecture will be an excellent match.
+- In addition, the data-tier is unspecific and future changes to the data-tier eliminates wide spread changes to the application-tier, where they are logically separated for ease of adaptability and maintainability if the data-tier were to change.
+- Independent tiers logically separating application functions allow modularity and provide a future friendly, robust and maintainable system architecture.

@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{1863889A-00DF-4350-BA39-669CA949CB81}") = "XGene360", "XGene360.phpproj", "{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Local Php 4 = Local Php 4
+		Local Php 5 = Local Php 5
+		Remote Php 4 = Remote Php 4
+		Remote Php 5 = Remote Php 5
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}.Local Php 4.ActiveCfg = Local|Php 4
+		{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}.Local Php 5.ActiveCfg = Local|Php 5
+		{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}.Local Php 5.Build.0 = Local|Php 5
+		{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}.Local Php 5.Deploy.0 = Local|Php 5
+		{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}.Remote Php 4.ActiveCfg = Remote|Php 4
+		{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}.Remote Php 4.Deploy.0 = Remote|Php 4
+		{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}.Remote Php 5.ActiveCfg = Remote|Php 5
+		{1498EEAA-4F38-4C9F-8DD8-FD727E8B487E}.Remote Php 5.Deploy.0 = Remote|Php 5
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

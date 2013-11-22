@@ -1,0 +1,43 @@
+//////////////////////////////////////////////////////////////////
+//	Name: Charles Bihis		Course: Cpsc 213	//
+//	Student #: 43180009		Class Section: 203	//
+//	Date: April 4, 2005		Lab Section: L2M	//
+////////////////////////////////////////////////////////////////// 
+
+Part 3 - Sample Output
+
+********************* Server *********************
+valdes:~/cs213/a8_L2M> chatServer2 7000
+SIGPIPE set to ignore.13
+*Sally has entered the conversation.
+*Jim has entered the conversation.
+Client sent: "hello sally"
+Client sent: "hello jim"
+Client sent: "how are you"
+Client sent: "i am fine"
+Client sent: "Quit"
+Segmentation fault
+valdes:~/cs213/a8_L2M>
+
+********************* Client One *********************
+valdes:~/cs213/a8_L2M> chatClient2 Jim localhost 7000
+SIGPIPE set to ignore.13
+*You have entered the conversation.
+hello sally
+Sally: hello jim
+Sally: how are you
+i am fine
+Quit
+Client: Server shut down!
+valdes:~/cs213/a8_L2M>
+
+********************* Client Two *********************
+valdes:~/cs213/a8_L2M> chatClient2 Sally localhost 7000
+SIGPIPE set to ignore.13
+*You have entered the conversation.
+Jim: hello sally
+hello jim
+how are you
+Jim: i am fine
+Client: Server shut down!
+valdes:~/cs213/a8_L2M>

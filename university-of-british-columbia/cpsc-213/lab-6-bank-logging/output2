@@ -1,0 +1,150 @@
+//////////////////////////////////////////////////////////////////////////
+// 	Name: Charles Bihis			Course: Cpsc 213	//
+// 	Student #: 43180009			Class Section: 203	//
+// 	Date: March 15, 2005			Lab Section L2M		//
+//////////////////////////////////////////////////////////////////////////
+
+Sample Output - concurrent transaction
+
+*** Window 1 ***
+
+gambier:~/cs213/a6_L2M> make
+gcc -c bankKey.c
+gcc -c bankApp.c
+gcc -c bankLog.c
+gcc -o bankKey bankKey.o bankApp.o bankLog.o
+gambier:~/cs213/a6_L2M> bankKey
+waitForKeystroke=0, createAccounts=0, t=500 
+        acctNums[0]=1 
+        acctNums[1]=2 
+
+   ... main: getBalance[0]
+gambier:~/cs213/a6_L2M> bankKey k=1
+waitForKeystroke=1, createAccounts=0, t=500 
+        acctNums[0]=1 
+        acctNums[1]=2 
+
+acctNum=1
+        ENTER to openOrCreateAcct()
+        ENTER to record log
+*account1 opened...
+acctNum=1
+        ENTER to get balance
+        ENTER to lock account
+acctNum=1
+        ENTER to calculate new balance
+        acctNums[0]=1 (fd=4, obal=0, nbal=500)
+        ENTER to record log with new balance sent
+        transaction 1: account1 is sent a new balance of 500
+acctNum=2
+        ENTER to openOrCreateAcct()
+        ENTER to record log
+*account2 opened...
+acctNum=2
+        ENTER to get balance
+        ENTER to lock account
+acctNum=2
+        ENTER to calculate new balance
+        acctNums[1]=2 (fd=5, obal=0, nbal=-500)
+        ENTER to record log with new balance sent
+        transaction 2: account2 is sent a new balance of -500
+
+acctNum=1
+        ENTER to setBalance()
+        ENTER to record log with new balance SET
+        transaction 1: account1 is SET a new balance of 500
+acctNum=1
+        ENTER to getBalance(), after setBalance()
+        ENTER to lockf(F_ULOCK)
+        acctNums[0]=1 (fd=4): actual balance in file = 500)
+acctNum=1
+        ENTER to close()
+        ENTER to record log
+
+acctNum=2
+        ENTER to setBalance()
+        ENTER to record log with new balance SET
+        transaction 2: account2 is SET a new balance of -500
+acctNum=2
+        ENTER to getBalance(), after setBalance()
+        ENTER to lockf(F_ULOCK)
+        acctNums[1]=2 (fd=5): actual balance in file = -500)
+acctNum=2
+        ENTER to close()
+        ENTER to record log
+
+
+*** End of transaction ***
+
+gambier:~/cs213/a6_L2M> 
+
+
+
+*** Window 2 ***
+
+valdes:~> cd cs213/a6_L2M/
+valdes:~/cs213/a6_L2M> bankKey
+waitForKeystroke=0, createAccounts=0, t=500 
+        acctNums[0]=1 
+        acctNums[1]=2 
+
+        acctNums[0]=1 (fd=4, obal=0, nbal=500)
+   ... main: getBalance[1]
+valdes:~/cs213/a6_L2M> bankKey k=1
+waitForKeystroke=1, createAccounts=0, t=500 
+        acctNums[0]=1 
+        acctNums[1]=2 
+
+acctNum=1
+        ENTER to openOrCreateAcct()
+        ENTER to record log
+*account1 opened...
+acctNum=1
+        ENTER to get balance
+        ENTER to lock account
+
+
+acctNum=1
+        ENTER to calculate new balance  acctNums[0]=1 (fd=4, obal=500, nbal=1000)
+        ENTER to record log with new balance sent       transaction 1: account1 is sent a new balance of 1000
+acctNum=2
+        ENTER to openOrCreateAcct()
+        ENTER to record log
+*account2 opened...
+acctNum=2
+        ENTER to get balance
+        ENTER to lock account
+acctNum=2
+        ENTER to calculate new balance
+        acctNums[1]=2 (fd=5, obal=-500, nbal=-1000)
+        ENTER to record log with new balance sent
+        transaction 2: account2 is sent a new balance of -1000
+
+acctNum=1
+        ENTER to setBalance()
+        ENTER to record log with new balance SET
+        transaction 1: account1 is SET a new balance of 1000
+acctNum=1
+        ENTER to getBalance(), after setBalance()
+        ENTER to lockf(F_ULOCK)
+        acctNums[0]=1 (fd=4): actual balance in file = 1000)
+acctNum=1
+        ENTER to close()
+        ENTER to record log
+
+acctNum=2
+        ENTER to setBalance()
+        ENTER to record log with new balance SET
+        transaction 2: account2 is SET a new balance of -1000
+acctNum=2
+        ENTER to getBalance(), after setBalance()
+        ENTER to lockf(F_ULOCK)
+        acctNums[1]=2 (fd=5): actual balance in file = -1000)
+acctNum=2
+        ENTER to close()
+        ENTER to record log
+
+
+*** End of transaction ***
+
+valdes:~/cs213/a6_L2M> 

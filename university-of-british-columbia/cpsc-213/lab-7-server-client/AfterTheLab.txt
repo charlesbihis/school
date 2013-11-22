@@ -1,0 +1,16 @@
+//////////////////////////////////////////////////////////////////
+//	Name: Charles Bihis		Course: Cpsc 213	//
+//	Student #: 43180009		Class Section: 203	//
+//	Date: March 22, 2005		Lab Section: L2M	//
+////////////////////////////////////////////////////////////////// 
+
+After The Lab
+
+1. The close () call will close the sending and the receiving
+   whereas shutdown () can close either the sending or the
+   receiving or both.
+
+2. Possibly, for the first attempt, the queue for the calls to be
+   accepted may have been filled, and therefore the call was 
+   rejected.  Now, for the second attempt, the server may have been
+   shut down by a previous caller in the queue.
